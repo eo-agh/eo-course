@@ -1,6 +1,6 @@
-site_name: AGH Earth Observation Lab
+site_name: Satellite Remote Sensing lectures and labs
 docs_dir: docs
-repo_url: https://github.com/eo-agh/site
+repo_url: https://github.com/eo-agh/eo-labs/
 
 copyright: Copyright 2025 AGH UST
 
