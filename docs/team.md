@@ -1,0 +1,1 @@
+Our team consists of researchers, engineers, and students passionate about geospatial technologies and environmental applications. We collaborate with academic institutions, industry partners, and government agencies to push the boundaries of Earth observation research.
