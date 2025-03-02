@@ -4,17 +4,17 @@
 
 [Course Syllabus](https://sylabusy.agh.edu.pl/en/document/7b443748-d38e-4c45-a0bf-6d57beb41d2b.pdf)
 
-## Goals
+## **Goals**
 The course aims to provide students with a comprehensive understanding of modern satellite remote sensing techniques. It covers both **optical** and **Synthetic Aperture Radar (SAR)** technologies, focusing on:
 - Acquisition, processing, and analysis of satellite data,
 - Applications in **space technology**, **Earth observation**, and **geospatial analysis**.
 
-## Course Overview
+## **Course Overview**
 This course is conducted as part of the **Downstream specialization** within the **Master's program in Space Technologies**. The course is divided into two sections:
 - **Optical Data Processing** – Led by **Dr. Eng. Michał Lupa** ([LinkedIn](https://www.linkedin.com/notifications/?filter=all), [ResearchGate](https://www.researchgate.net))
 - **Radar Data Processing** – Led by **Dr. Dariusz Ziółkowski** ([IGIK](http://www.igik.edu.pl/pl/a/Dariusz-Ziolkowski), [ResearchGate](https://www.researchgate.net/profile/Dariusz-Ziolkowski))
 
-## Lecture Schedule
+## **Lecture Schedule**
 Lectures are held on **Wednesdays from 11:30 to 13:00**.
 
 ### **Optical Data Processing**
@@ -40,7 +40,7 @@ Lectures are held on **Wednesdays from 11:30 to 13:00**.
 | June 11, 2025 | - |
 | June 18, 2025 | Dr. Dariusz Ziółkowski |
 
-## Laboratory Classes
+## **Laboratory Classes**
 Laboratory sessions are held on **Wednesdays**, with two time slots:
 - **Slot 1:** 13:15 - 14:45
 - **Slot 2:** 15:00 - 16:30
