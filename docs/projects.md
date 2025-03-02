@@ -27,7 +27,7 @@ The final evaluation of the project takes place through a **poster presentation*
 
 ## **3. Research Groups & Project Support**
 Projects must be conducted **within student research groups**, preferably those officially registered at the  
-**AGH Center for Space Technologies**, e.g. ([AGH STARS](www.linkedin.com/company/agh-stars/ )).
+**AGH Center for Space Technologies**, e.g. ([AGH STARS](https://www.linkedin.com/company/agh-stars/)).
 
 Being part of a research group offers students access to:  
 - **Expert knowledge**,  
@@ -37,15 +37,17 @@ Being part of a research group offers students access to:
 ---
 
 ## **4. List of Semester Projects (Summer 2025)**  
-The following projects are available for selection:  
+The following projects are available for selection. Click on a project title to see detailed guidelines:  
 
-1. **Assessment of Inland Water Quality Using Optical Data and In Situ Measurements: A Case Study of Dobczyckie Lake**  
-2. **Satellite Monitoring of Soil Moisture in Agriculture Using Optical and SAR Data**  
-3. **Satellite Monitoring of Open-Pit Mining Sites Using Optical and SAR Data**  
-4. **Satellite Monitoring of Winter Wheat Cultivation in Świętokrzyskie Voivodeship (Kazimierza County, 2015–Present)**  
-5. **Optimizing Mobile Beekeeping: Satellite-Based Recommendations for Beekeepers in Nowosądecki County**  
+1. **[🌊 Assessment of Inland Water Quality Using Optical Data and In Situ Measurements: A Case Study of Dobczyckie Lake](../assets/projects/water_quality.md)**  
+2. **[🌱 Satellite Monitoring of Soil Moisture in Agriculture Using Optical and SAR Data](../assets/projects/soil_moisture.md)**  
+3. **[🏗️ Satellite Monitoring of Open-Pit Mining Sites Using Optical and SAR Data](../assets/projects/mining_sites.md)**  
+4. **[🌾 Satellite Monitoring of Winter Wheat Cultivation in Świętokrzyskie Voivodeship (Kazimierza County, 2015–Present)](../assets/projects/wheat_monitoring.md)**  
+5. **[🐝 Optimizing Mobile Beekeeping: Satellite-Based Recommendations for Beekeepers in Nowosądecki County](../assets/projects/beekeeping.md)**  
+
+---
 
 ### **5. Custom Project Proposals**
 Students may propose their **own project**, provided that the topic is discussed and approved by the instructor **during class sessions**.  
 
----
+📌 **[Back to Course Homepage](../index.md)**  
