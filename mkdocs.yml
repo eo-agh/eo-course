@@ -39,6 +39,6 @@ markdown_extensions:
 
 nav:
   - Introduction: education.md
-  - Our Team: team.md
+  - Semester projects: projects.md
   - Get Involved: get_involved.md
   - Contact: contact.md
