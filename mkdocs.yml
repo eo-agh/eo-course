@@ -40,5 +40,9 @@ markdown_extensions:
 nav:
   - Introduction: introduction.md
   - Semester projects: projects.md
-  - Get Involved: get_involved.md
+  - Labs:
+      - Lab 0: assets/labs/lab_0.md
+      - Lab 1: assets/labs/lab_1.md
+  - Lectures:
+      - Lecture 1: assets/lectures/lecture_1.md
   - Contact: contact.md
