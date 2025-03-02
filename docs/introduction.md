@@ -1,6 +1,6 @@
-# Introduction
+## **Introduction**
 
-## Remote Sensing and Image Analysis in Space Tech
+## **Remote Sensing and Image Analysis in Space Tech**
 
 [Course Syllabus](https://sylabusy.agh.edu.pl/en/document/7b443748-d38e-4c45-a0bf-6d57beb41d2b.pdf)
 
