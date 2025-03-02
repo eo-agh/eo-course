@@ -39,11 +39,11 @@ Being part of a research group offers students access to:
 ## **4. List of Semester Projects (Summer 2025)**  
 The following projects are available for selection. Click on a project title to see detailed guidelines:  
 
-1. **[🌊 Assessment of Inland Water Quality Using Optical Data and In Situ Measurements: A Case Study of Dobczyckie Lake](../assets/projects/water_quality.md)**  
-2. **[🌱 Satellite Monitoring of Soil Moisture in Agriculture Using Optical and SAR Data](../assets/projects/soil_moisture.md)**  
-3. **[🏗️ Satellite Monitoring of Open-Pit Mining Sites Using Optical and SAR Data](../assets/projects/mining_sites.md)**  
-4. **[🌾 Satellite Monitoring of Winter Wheat Cultivation in Świętokrzyskie Voivodeship (Kazimierza County, 2015–Present)](../assets/projects/wheat_monitoring.md)**  
-5. **[🐝 Optimizing Mobile Beekeeping: Satellite-Based Recommendations for Beekeepers in Nowosądecki County](../assets/projects/beekeeping.md)**  
+1. **[🌊 Assessment of Inland Water Quality Using Optical Data and In Situ Measurements: A Case Study of Dobczyckie Lake](../assets/projects/water_quality/)**  
+2. **[🌱 Satellite Monitoring of Soil Moisture in Agriculture Using Optical and SAR Data](../assets/projects/soil_moisture/)**  
+3. **[🏗️ Satellite Monitoring of Open-Pit Mining Sites Using Optical and SAR Data](../assets/projects/mining_sites/)**  
+4. **[🌾 Satellite Monitoring of Winter Wheat Cultivation in Świętokrzyskie Voivodeship (Kazimierza County, 2015–Present)](../assets/projects/wheat_monitoring/)**  
+5. **[🐝 Optimizing Mobile Beekeeping: Satellite-Based Recommendations for Beekeepers in Nowosądecki County](../assets/projects/beekeeping/)**  
 
 ---
 
