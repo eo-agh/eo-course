@@ -38,9 +38,7 @@ markdown_extensions:
   - pymdownx.details
 
 nav:
-  - Introduction: introduction.md
-  - Research Areas: research.md
-  - Education: education.md
+  - Introduction: education.md
   - Our Team: team.md
   - Get Involved: get_involved.md
   - Contact: contact.md
