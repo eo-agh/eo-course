@@ -28,19 +28,22 @@ We will use GitHub for project version control.
 📌 **Download & Install Git**: [Git Download](https://git-scm.com/downloads)  
 
 📌 **Set up GitHub** (if you don’t have an account, create one at [GitHub](https://github.com/)):  
-```bash
+
+```
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
-
+```
 ## **3. Setting Up Python & Miniconda**  
 
 ### **3.1. Install Miniconda**  
 📌 **Download Miniconda**: [Miniconda Download](https://docs.conda.io/en/latest/miniconda.html)  
 
 📌 **Create and activate an environment for the course:**  
-```bash
+```
 conda create -n eo_lab python=3.9
 conda activate eo_lab
+```
 
-```bash
+```
 pip install geemap earthengine-api jupyterlab geopandas rasterio matplotlib numpy
+```
