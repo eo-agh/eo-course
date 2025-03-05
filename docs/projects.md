@@ -44,6 +44,9 @@ The following projects are available for selection. Click on a project title to 
 3. **[🏗️ Satellite Monitoring of Open-Pit Mining Sites Using Optical and SAR Data](../assets/projects/mining_sites/)**  
 4. **[🌾 Satellite Monitoring of Winter Wheat Cultivation in Świętokrzyskie Voivodeship (Kazimierza County, 2015–Present)](../assets/projects/wheat_monitoring/)**  
 5. **[🐝 Optimizing Mobile Beekeeping: Satellite-Based Recommendations for Beekeepers in Nowosądecki County](../assets/projects/beekeeping/)**  
+6. **[🚜 Monitoring Soil Tillage Using Satellite Data](../assets/projects/soil_tillage/)**  
+7. **[🌍 Monitoring Bare-Soil Exposure Using Satellite Data](../assets/projects/bare_soil/)**  
+8. **[🌊 Monitoring Chlorophyll Levels in Solina Reservoir Using Sentinel Data](../assets/projects/chl_a/)**  
 
 ---
 
