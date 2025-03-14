@@ -65,9 +65,6 @@ To perform remote sensing, three key components are required:
 
 These instruments analyze different energy sources and provide insights into **environmental changes, land cover, vegetation health, and more**.  
 
-Oto zaktualizowana sekcja **Platforms** w formacie Markdown:  
-
-```markdown
 ### 🛰️ Remote Sensing Platforms  
 
 Remote sensing platforms refer to the **carriers** that house cameras or sensors for data collection. These platforms can be **stationary** (e.g., cameras on tripods) or **mobile** (e.g., drones, aircraft, satellites). The choice of platform significantly affects the **type, scale, and frequency** of collected imagery.
