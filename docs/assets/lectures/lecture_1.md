@@ -89,7 +89,7 @@ As a general rule, **higher altitude platforms** tend to be **more expensive** b
 📉 **Resolution Considerations**  
 The **farther a platform is from Earth**, the lower the spatial resolution tends to be. This means that each pixel in the image represents a larger surface area on Earth.
 
-![Platform Types](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image2.jpg)
+![Platform Types](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image2.png)
 
 ---
 
