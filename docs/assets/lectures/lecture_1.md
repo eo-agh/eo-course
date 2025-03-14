@@ -43,7 +43,7 @@ The quality and usability of remote sensing data depend on different resolution 
 
 Remote sensing is the **process of collecting information** about objects from a distance, without the need for physical contact. It is both a **science and an art**, as it involves obtaining and interpreting data about an object, area, or phenomenon through measurements made by instruments that are not in direct contact with the subject (Lillesand et al., 2015).
 
-![Remote Sensing Illustration](/assets/images/lecture1_image1.jpg)
+![Remote Sensing Illustration](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image1.jpg)
 
 
 ### 👁️ Detecting Light  
