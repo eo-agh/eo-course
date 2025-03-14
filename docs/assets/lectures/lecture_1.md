@@ -158,6 +158,79 @@ These behaviors are critical in **remote sensing**, as they determine how energy
 
 ![Wave Behaviors ](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image6.jpg)  
 
+
+## 3.5 The Spectrum of Electromagnetic Radiation  
+
+Electromagnetic energy travels in **waves** and spans a **broad spectrum** ranging from **very long radio waves** to **very short gamma rays**. The **human eye** can detect only a **small portion** of this spectrum, known as **visible light**.  
+
+Other devices, such as **radios**, **X-ray machines**, and **scientific instruments** used in remote sensing, are capable of detecting different regions of the **electromagnetic spectrum (EMS)**. These instruments allow scientists to study not only **Earth** but also **the solar system** and even **the universe beyond**.  
+
+---
+
+### 📊 3.5.1 Electromagnetic Spectrum Overview  
+
+The figure below illustrates the **different regions of the electromagnetic spectrum**, including their:  
+- **Names** (radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, gamma rays)  
+- **Wavelengths** (measured in meters, micrometers, or nanometers)  
+- **Frequencies** (measured in Hertz)  
+- **Energy levels**  
+
+It also highlights the **scale of objects** that can interact with each wavelength and the biological or environmental **influences of different EM radiation types**.  
+
+![EM Spectrum](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image7.jpg)  
+
+---
+
+### 🔬 3.5.2 Wavelength, Frequency, and Energy Relationship  
+
+Now that we have discussed the **fundamental properties of EM waves**, we can explore how **photons** are distributed along the **electromagnetic spectrum (EMS)**.  
+
+We know that:  
+- **Wavelength and frequency are inversely related** (shorter wavelength = higher frequency).  
+- **Photon energy increases as wavelength decreases**.  
+
+#### **Blackbody Radiation and Temperature Dependence**  
+
+The **temperature of an object** affects the **wavelength of radiation it emits**. The figure above also demonstrates this using a **thermometer**, which shows that:  
+- **Hotter objects emit shorter wavelengths** of radiation.  
+- **Cooler objects emit longer wavelengths** of radiation.  
+
+This relationship follows **Planck's Law**, which describes the emission of electromagnetic radiation from an idealized **blackbody**. A blackbody is a **theoretical object** that absorbs **all incoming radiation** and emits energy based purely on its temperature.  
+
+For example:  
+- The **Sun (5788 K)** emits most of its radiation at **~0.5 × 10⁻⁶ m (500 nm, visible light)**.  
+- The **human body (~310 K)** emits most of its radiation at **~10⁻⁴ m (infrared range, ~10 µm)**.  
+
+📌 **Important Note:** In reality, **blackbodies do not exist**—real-world objects always emit slightly less radiation than a perfect blackbody at the same temperature.  
+
+---
+
+### 🔄 3.5.3 Why Is This Important for Remote Sensing?  
+
+Understanding the **electromagnetic spectrum** is crucial for remote sensing because:  
+✅ Different materials interact with specific **wavelengths** of radiation.  
+✅ Sensors are designed to detect radiation at different **frequencies** (e.g., infrared for vegetation, microwaves for weather radar).  
+✅ The **Earth's atmosphere** absorbs certain wavelengths while allowing others to pass through (this is why certain satellites use infrared or microwave sensors to "see" through clouds).  
+
+This knowledge allows us to design **specialized remote sensing instruments** for applications such as:  
+🌱 **Vegetation monitoring** (infrared and near-infrared reflectance)  
+🏙️ **Urban mapping** (visible and shortwave infrared)  
+🌊 **Water quality assessment** (UV and visible light absorption)  
+🌎 **Climate studies** (microwave and infrared radiation)  
+
+---
+
+## 🔜 Next Sections  
+
+In the following sections, we will explore:  
+
+➡️ **[Atmospheric Effects](#4-atmospheric-effects)**  
+➡️ **[Passive vs. Active Imaging](#5-passive-vs-active-imaging)**  
+➡️ **[Resolutions - Imaging Properties](#6-resolutions-imaging-properties)**  
+
+Stay tuned! 🚀  
+
+
 ---
 
 ## 🔜 Next Sections  
