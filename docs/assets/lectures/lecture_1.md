@@ -4,7 +4,7 @@
 
 By the end of this lecture, you will understand:
 
-✅ **[What remote sensing is](#-what-is-remote-sensing)** and its importance in Earth observation  
+✅ **What is Remote Sensing** and its importance in Earth observation  
 ✅ **The role of electromagnetic radiation (EMR)** in remote sensing  
 ✅ **How the atmosphere affects remote sensing data**  
 ✅ **The difference between passive and active remote sensing systems**  
@@ -39,11 +39,11 @@ The quality and usability of remote sensing data depend on different resolution 
 
 ---
 
-## 🌍 What is Remote Sensing?
+## 🌍 What is Remote Sensing? {#what-is-remote-sensing}
 
 Remote sensing is the **process of collecting information** about objects from a distance, without the need for physical contact. It is both a **science and an art**, as it involves obtaining and interpreting data about an object, area, or phenomenon through measurements made by instruments that are not in direct contact with the subject (Lillesand et al., 2015).
 
-![Remote Sensing Illustration](./assets/images/lecture1_image1.jpg)
+![Remote Sensing Illustration](../assets/images/lecture1_image1.jpg)
 
 ### 👁️ Detecting Light  
 
