@@ -1,4 +1,4 @@
-Here’s the introduction and summary for **Lecture 1: Fundamentals of Remote Sensing** in Markdown format:
+
 
 ```markdown
 # 🛰️ Lecture 1: Fundamentals of Remote Sensing
