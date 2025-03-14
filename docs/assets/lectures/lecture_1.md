@@ -37,7 +37,6 @@ The quality and usability of remote sensing data depend on different resolution 
 ---
 
 📌 _In the next sections, we will explore each of these topics in detail with examples and illustrations._  
-```  
 
 ## 🌍 What is Remote Sensing?
 
