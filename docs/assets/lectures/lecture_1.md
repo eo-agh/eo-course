@@ -1,6 +1,4 @@
 
-
-```markdown
 # 🛰️ Lecture 1: Fundamentals of Remote Sensing
 
 ## 🎯 Learning Objectives
