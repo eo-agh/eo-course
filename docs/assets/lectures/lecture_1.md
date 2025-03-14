@@ -144,22 +144,9 @@ Thus, **waves with longer wavelengths carry less energy**, while **short-wavelen
 
 ---
 
-### 🔄 3.4 Wave Behaviors  
-
-When electromagnetic waves interact with different materials, they exhibit **predictable behaviors**:  
-
-1️⃣ **Reflection** – The wave bounces off a surface (important for optical remote sensing).  
-2️⃣ **Absorption** – The wave's energy is absorbed by the material.  
-3️⃣ **Scattering** – The wave changes direction randomly (e.g., atmospheric scattering).  
-4️⃣ **Transmission** – The wave passes through the material without being absorbed.  
-5️⃣ **Emission & Re-emission** – The material releases stored energy as electromagnetic radiation.  
-
-These behaviors are critical in **remote sensing**, as they determine how energy interacts with Earth's surface and atmosphere, affecting how we interpret satellite imagery.  
-
-![Wave Behaviors ](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/Lecture1_image6.jpg)  
 
 
-## 3.5 The Spectrum of Electromagnetic Radiation  
+## 3.4 The Spectrum of Electromagnetic Radiation  
 
 Electromagnetic energy travels in **waves** and spans a **broad spectrum** ranging from **very long radio waves** to **very short gamma rays**. The **human eye** can detect only a **small portion** of this spectrum, known as **visible light**.  
 
@@ -167,7 +154,7 @@ Other devices, such as **radios**, **X-ray machines**, and **scientific instrume
 
 ---
 
-### 📊 3.5.1 Electromagnetic Spectrum Overview  
+### 📊 3.4.1 Electromagnetic Spectrum Overview  
 
 The figure below illustrates the **different regions of the electromagnetic spectrum**, including their:  
 - **Names** (radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, gamma rays)  
@@ -181,7 +168,7 @@ It also highlights the **scale of objects** that can interact with each waveleng
 
 ---
 
-### 🔬 3.5.2 Wavelength, Frequency, and Energy Relationship  
+### 🔬 3.4.2 Wavelength, Frequency, and Energy Relationship  
 
 Now that we have discussed the **fundamental properties of EM waves**, we can explore how **photons** are distributed along the **electromagnetic spectrum (EMS)**.  
 
@@ -207,7 +194,7 @@ For example:
 ---
 
 
-### 🌞 3.5.3 The Primary Source of Electromagnetic Radiation {#53-the-primary-source-of-electromagnetic-radiation}  
+### 🌞 3.4.3 The Primary Source of Electromagnetic Radiation {#53-the-primary-source-of-electromagnetic-radiation}  
 
 The primary source of energy received on Earth is electromagnetic radiation emitted from the Sun.  
 
@@ -221,10 +208,69 @@ The Sun emits most of its energy at optical wavelengths, between 0.1 µm to 4 µ
 
 ---
 
+### 🔬 3.4.4 Absorption in the Atmosphere
+
+Understanding where our atmosphere absorbs different parts of the **electromagnetic radiation (EMR)** is crucial for interpreting signals received by **remote sensing instruments**.  
+
+A key distinction between **atmospheric absorption** and **scattering** is the **effective energy loss** to atmospheric constituents. In absorption, energy is **directly transferred** into molecules in the atmosphere or to the **remote sensing targets**.  
+
+Certain **gases in the atmosphere**, such as:  
+- **Ozone (O₃)**  
+- **Carbon dioxide (CO₂)**  
+- **Water vapor (H₂O)**  
+
+can **absorb energy** and contribute to **warming the planet**.
 
 ---
 
-### 🔄 3.5.4 Why Is This Important for Remote Sensing?  
+### 🌍 3.4.4.1 Atmospheric Windows and Absorption  
+
+From a **remote sensing perspective**, the goal is to use **wavelengths that avoid strong absorption regions** in the atmosphere.  
+
+📌 **Where the atmosphere is highly transmissive to incoming wavelengths, we call these regions "atmospheric windows".**  
+
+The **brown curve** in the diagram below represents the **opaqueness** of the atmosphere.  
+
+- The **big atmospheric windows between 1 mm and 1 m** allow us to operate **microwave remote sensing systems** (e.g., radar sensors).  
+- In contrast, **atmospheric windows in the multispectral portions of the EM spectrum** are much **narrower**.  
+
+![Atmospheric Absorption](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image10.jpg)  
+
+---
+
+### 🔄 3.4.4.2 Wave Behaviors  
+
+When electromagnetic waves interact with different materials, they exhibit **predictable behaviors**:  
+
+1️⃣ **Reflection** – The wave bounces off a surface (important for optical remote sensing).  
+2️⃣ **Absorption** – The wave's energy is absorbed by the material.  
+3️⃣ **Scattering** – The wave changes direction randomly (e.g., atmospheric scattering).  
+4️⃣ **Transmission** – The wave passes through the material without being absorbed.  
+5️⃣ **Emission & Re-emission** – The material releases stored energy as electromagnetic radiation.  
+
+These behaviors are critical in **remote sensing**, as they determine how energy interacts with Earth's surface and atmosphere, affecting how we interpret satellite imagery.  
+
+![Wave Behaviors ](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/Lecture1_image6.jpg)  
+
+### 🔄 3.4.4.3 Selecting the Right Remote Sensing Instrument  
+
+When designing or choosing **remote sensing sensors**, it is essential to carefully consider the following three questions:  
+
+1️⃣ **What is the spectral sensitivity of my sensor?**  
+   - Does my sensor operate in a wavelength range affected by atmospheric absorption?  
+
+2️⃣ **Which atmospheric windows can be used with this sensor?**  
+   - Is my sensor designed to work in regions of high transmissivity?  
+
+3️⃣ **What is the source, magnitude, and composition of the outgoing signal we are aiming to analyze?**  
+   - How does the atmosphere influence the signal we receive?  
+
+Selecting an appropriate sensor and **understanding atmospheric absorption** is critical to ensuring the accuracy of **Earth observation data**.  
+
+
+---
+
+### 🔄 3.4.4.5 Why Is This Important for Remote Sensing?  
 
 Understanding the **electromagnetic spectrum** is crucial for remote sensing because:  
 ✅ Different materials interact with specific **wavelengths** of radiation.  
@@ -238,8 +284,6 @@ This knowledge allows us to design **specialized remote sensing instruments** fo
 🌎 **Climate studies** (microwave and infrared radiation)  
 
 ---
-
-
 
 
 ## 🔜 Next Sections  
