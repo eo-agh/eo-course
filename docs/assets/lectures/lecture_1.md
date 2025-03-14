@@ -89,6 +89,85 @@ This means that each pixel in the image represents a larger surface area on Eart
 
 ![Platform Types](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image3.png)  
 
+
+## 3️⃣ Electromagnetic Waves {#3-electromagnetic-waves} 🌊  
+
+The application of remote sensing sensors and methods relies on the existence of **electromagnetic (EM) radiation**. Whether the radiation is passively measured (e.g., reflection of sunlight) or actively emitted from an instrument, **remote sensing cannot function without this source of energy**.  
+
+But what exactly are **waves**?  
+
+A **wave** is an undulating motion that transports **energy** in the direction of its propagation. A simple example of natural waves can be seen in **water waves** forming after a stone is thrown into a pond. Similarly, **sound waves** are created when we speak or when a police siren passes by.  
+
+### 🌞 3.1 Electromagnetic Wave Structure  
+
+Radiation from the Sun travels in the form of **electromagnetic waves**, where **electric** and **magnetic fields** are coupled together.  
+
+An **electromagnetic wave** consists of two perpendicular components:  
+- **An electric field (E, blue)**
+- **A magnetic field (B, red)**  
+
+The **electric field** oscillates in one plane, while the **magnetic field** oscillates at a right angle to it. Both fields propagate at the **speed of light** (~300,000 km/s).  
+
+![Electromagnetic Wave Structure](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image5.gif)  
+
+---
+
+### 📏 3.2 Wave Characteristics  
+
+Electromagnetic waves are described by three fundamental properties:  
+
+1️⃣ **Frequency (ν)** – The number of wave cycles (marked by crests) that pass a point in a given time (usually per second).  
+2️⃣ **Wavelength (λ)** – The distance between two successive crests of a wave.  
+   - **Wavelength and frequency are inversely proportional**:  
+     - Higher frequency → **shorter wavelength**  
+     - Lower frequency → **longer wavelength**  
+3️⃣ **Amplitude (A)** – The height of the wave from its **rest position** to the **crest** (top) or **trough** (bottom).  
+   - **Intensity** (important in remote sensing) is proportional to the square of the amplitude.  
+
+The relationship between these properties can be expressed as:  
+\[
+\text{frequency} = \frac{\text{speed of light}}{\text{wavelength}}
+\]
+
+---
+
+### 🔬 3.3 Energy and Wavelength  
+
+The **energy of a wave** is directly related to its frequency:  
+
+- **Higher frequency = more energy**  
+- **Lower frequency = less energy**  
+
+Thus, **waves with longer wavelengths carry less energy**, while **short-wavelength waves (like X-rays) carry more energy**.  
+
+![Electromagnetic Spectrum](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image4.png)  
+
+---
+
+### 🔄 3.4 Wave Behaviors  
+
+When electromagnetic waves interact with different materials, they exhibit **predictable behaviors**:  
+
+1️⃣ **Reflection** – The wave bounces off a surface (important for optical remote sensing).  
+2️⃣ **Absorption** – The wave's energy is absorbed by the material.  
+3️⃣ **Scattering** – The wave changes direction randomly (e.g., atmospheric scattering).  
+4️⃣ **Transmission** – The wave passes through the material without being absorbed.  
+5️⃣ **Emission & Re-emission** – The material releases stored energy as electromagnetic radiation.  
+
+These behaviors are critical in **remote sensing**, as they determine how energy interacts with Earth's surface and atmosphere, affecting how we interpret satellite imagery.  
+
+![Wave Behaviors ](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image6.jpg)  
+
+---
+
+## 🔜 Next Sections  
+
+In the following sections, we will explore:  
+
+➡️ **[Atmospheric Effects](#4-atmospheric-effects)**  
+➡️ **[Passive vs. Active Imaging](#5-passive-vs-active-imaging)**  
+➡️ **[Resolutions - Imaging Properties](#6-resolutions-imaging-properties)** 
+
 ---
 
 ## 🔜 Next Sections  
