@@ -203,9 +203,28 @@ For example:
 
 📌 **Important Note:** In reality, **blackbodies do not exist**—real-world objects always emit slightly less radiation than a perfect blackbody at the same temperature.  
 
+
 ---
 
-### 🔄 3.5.3 Why Is This Important for Remote Sensing?  
+
+### 🌞 3.5.3 The Primary Source of Electromagnetic Radiation {#53-the-primary-source-of-electromagnetic-radiation}  
+
+The primary source of energy received on Earth is electromagnetic radiation emitted from the Sun.  
+
+The Sun’s radiation is reflected and absorbed by the Earth's atmosphere and surface. Satellites carry instruments that measure the electromagnetic radiation reflected or emitted.  
+
+![Prim EM Source](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image8.jpg)  
+
+The Sun emits most of its energy at optical wavelengths, between 0.1 µm to 4 µm. Solar energy, frequently referred to as shortwave radiation, includes ultraviolet, visible, and infrared radiation. In Earth satellite remote sensing, we are mostly concerned with wavelengths from ultraviolet (0.1 µm) through the microwave (100,000 µm).  
+
+![Sun Emission](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image9.jpg)  
+
+---
+
+
+---
+
+### 🔄 3.5.4 Why Is This Important for Remote Sensing?  
 
 Understanding the **electromagnetic spectrum** is crucial for remote sensing because:  
 ✅ Different materials interact with specific **wavelengths** of radiation.  
@@ -219,6 +238,9 @@ This knowledge allows us to design **specialized remote sensing instruments** fo
 🌎 **Climate studies** (microwave and infrared radiation)  
 
 ---
+
+
+
 
 ## 🔜 Next Sections  
 
