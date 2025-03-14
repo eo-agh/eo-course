@@ -40,6 +40,8 @@ Drones, airplanes, and satellites equipped with specialized sensors capture this
 Depending on the application, **remote sensing sensors** collect data across different parts of the **electromagnetic spectrum** and at various levels of resolution.  
 This helps in characterizing different land areas, water bodies, and atmospheric conditions.  
 
+![Land Cover Example](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image2.png)  
+
 ### 🔑 1.3 Essential Elements of Remote Sensing  
 
 To perform remote sensing, three key components are required:  
@@ -85,7 +87,7 @@ As a general rule, **higher altitude platforms** tend to be **more expensive** b
 The **farther a platform is from Earth**, the lower the spatial resolution tends to be.  
 This means that each pixel in the image represents a larger surface area on Earth.  
 
-![Platform Types](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image2.png)  
+![Platform Types](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image3.png)  
 
 ---
 
