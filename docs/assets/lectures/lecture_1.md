@@ -14,7 +14,7 @@ By the end of this lecture, you will understand:
 
 ## 📌 Lecture Topics Overview
 
-### 🌍 [What is Remote Sensing?](#-what-is-remote-sensing)
+### 🌍 [What is Remote Sensing?]{#-what-is-remote-sensing}
 Remote sensing is the process of gathering information about an object or environment from a distance, typically using satellites, aircraft, or drones. It plays a crucial role in monitoring the Earth's surface, oceans, and atmosphere.
 
 ### 🌞 Electromagnetic Radiation (EMR)
