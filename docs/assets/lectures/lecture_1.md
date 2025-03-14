@@ -156,7 +156,7 @@ When electromagnetic waves interact with different materials, they exhibit **pre
 
 These behaviors are critical in **remote sensing**, as they determine how energy interacts with Earth's surface and atmosphere, affecting how we interpret satellite imagery.  
 
-![Wave Behaviors ](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image6.jpg)  
+![Wave Behaviors ](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/Lecture1_image6.jpg)  
 
 
 ## 3.5 The Spectrum of Electromagnetic Radiation  
