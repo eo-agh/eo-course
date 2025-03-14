@@ -221,9 +221,21 @@ Certain **gases in the atmosphere**, such as:
 
 can **absorb energy** and contribute to **warming the planet**.
 
+When electromagnetic waves interact with different materials, they exhibit **predictable behaviors**:  
+
+1️⃣ **Reflection** – The wave bounces off a surface (important for optical remote sensing).  
+2️⃣ **Absorption** – The wave's energy is absorbed by the material.  
+3️⃣ **Scattering** – The wave changes direction randomly (e.g., atmospheric scattering).  
+4️⃣ **Transmission** – The wave passes through the material without being absorbed.  
+5️⃣ **Emission & Re-emission** – The material releases stored energy as electromagnetic radiation.  
+
+These behaviors are critical in **remote sensing**, as they determine how energy interacts with Earth's surface and atmosphere, affecting how we interpret satellite imagery.  
+
+![Wave Behaviors ](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/Lecture1_image6.jpg)  
+
 ---
 
-### 🌍 3.4.4.1 Atmospheric Windows and Absorption  
+### 🌍 3.4.4.1 Atmospheric Windows
 
 From a **remote sensing perspective**, the goal is to use **wavelengths that avoid strong absorption regions** in the atmosphere.  
 
@@ -238,21 +250,7 @@ The **brown curve** in the diagram below represents the **opaqueness** of the at
 
 ---
 
-### 🔄 3.4.4.2 Wave Behaviors  
-
-When electromagnetic waves interact with different materials, they exhibit **predictable behaviors**:  
-
-1️⃣ **Reflection** – The wave bounces off a surface (important for optical remote sensing).  
-2️⃣ **Absorption** – The wave's energy is absorbed by the material.  
-3️⃣ **Scattering** – The wave changes direction randomly (e.g., atmospheric scattering).  
-4️⃣ **Transmission** – The wave passes through the material without being absorbed.  
-5️⃣ **Emission & Re-emission** – The material releases stored energy as electromagnetic radiation.  
-
-These behaviors are critical in **remote sensing**, as they determine how energy interacts with Earth's surface and atmosphere, affecting how we interpret satellite imagery.  
-
-![Wave Behaviors ](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/Lecture1_image6.jpg)  
-
-### 🔄 3.4.4.3 Selecting the Right Remote Sensing Instrument  
+### 🔄 3.4.4.2 Selecting the Right Remote Sensing Instrument  
 
 When designing or choosing **remote sensing sensors**, it is essential to carefully consider the following three questions:  
 
@@ -266,7 +264,6 @@ When designing or choosing **remote sensing sensors**, it is essential to carefu
    - How does the atmosphere influence the signal we receive?  
 
 Selecting an appropriate sensor and **understanding atmospheric absorption** is critical to ensuring the accuracy of **Earth observation data**.  
-
 
 ---
 
@@ -285,6 +282,99 @@ This knowledge allows us to design **specialized remote sensing instruments** fo
 
 ---
 
+4️⃣ Spectral Signatures {#4-spectral-signatures}  
+
+## 🔍 4.1 What are Spectral Signatures? {#41-what-are-spectral-signatures}  
+
+Different wavelengths of the **electromagnetic spectrum** interact **differently** with various materials on Earth's surface and in the atmosphere.  
+
+Certain **materials and physical properties** have a unique way of interacting with incident radiation. This interaction is called the **spectral response**—how the material reflects, absorbs, or emits radiation.  
+
+📌 **The spectral response of an object is known as its spectral signature.**  
+
+For example:  
+- Some materials have a **higher reflectance** at specific wavelengths.  
+- The **percent reflectance** is the ratio of **reflected energy** to the total incident energy at a given wavelength.  
+
+### 🔬 Key Concepts  
+
+🟢 **Radiance**: A measure of the power of electromagnetic radiation emitted from an object per unit area for a given wavelength. In the visible spectrum, radiance is also described as the **brightness** of the source. It is directly proportional to **amplitude** (and intensity) of the wave.  
+
+⚪ **Surface Albedo**: The fraction of incident radiation that is **reflected by the Earth's surface** for a given location and time.  
+- **Values range from 0 to 1**, where:  
+  - **0** → The surface absorbs all radiation.  
+  - **1** → The surface reflects all radiation.  
+
+---
+
+## 💡 4.2 Types of Reflection {#42-types-of-reflection}  
+
+The way **electromagnetic waves** interact with surfaces depends on their **roughness**. There are three main types of reflection:  
+
+### 1️⃣ **Specular Reflection** (Mirror-like)  
+- Occurs when light strikes a **smooth** surface.  
+- The **angle of incidence** is equal to the **angle of reflection**.  
+- Example: **Glass, still water, metal surfaces**.  
+
+### 2️⃣ **Diffuse Reflection**  
+- Happens on **rough** surfaces, scattering light in **all directions**.  
+- No clear angle of reflection.  
+- Example: **Concrete, vegetation, unpolished wood**.  
+
+### 3️⃣ **Mixed Reflection**  
+- The most **common** type in nature.  
+- A combination of **specular and diffuse** reflection.  
+- Example: **Most natural surfaces like soil, rocks, leaves**.  
+
+---
+
+## 🛰️ 4.3 Remote Sensing and Spectral Signatures {#43-remote-sensing-and-spectral-signatures}  
+
+**Remote sensors** are designed to detect **wavelengths** in particular parts of the **electromagnetic spectrum**. These instruments help **identify objects or materials** based on their spectral signatures.  
+
+Let's examine how different materials on Earth interact with **electromagnetic radiation** and define their unique spectral signatures:  
+
+### 🍃 Vegetation  
+- Plants absorb **blue and red light** due to **photosynthesis**.  
+- **Peak reflectance** occurs in the **green** region (which is why plants appear green).  
+- **Near-infrared (NIR) reflectance** is much **higher** than in the visible spectrum.  
+
+---
+
+### 🌊 Water  
+- **Clear water absorbs most radiation**, appearing dark.  
+- **Turbid water** reflects **more** light.  
+- **Algal blooms increase green reflectance**.  
+
+---
+
+### 🏜️ Soil  
+- Soil **moisture content** impacts its spectral signature.  
+- **Dry soil** has **higher reflectance** than **wet soil**.  
+
+---
+
+### ❄️ Ice & Snow  
+- **Fresh snow has high reflectance** across the visible and NIR regions.  
+- **Aged or dirty snow absorbs more radiation**, lowering reflectance.  
+
+---
+
+### ☁️ Atmosphere  
+- Atmospheric **gases and particles** scatter and absorb certain wavelengths.  
+- Clouds reflect visible light, making them bright in satellite imagery.  
+
+📌 **Understanding atmospheric interference is crucial** for interpreting remote sensing data correctly.
+
+---
+
+## 🎯 4.4 Using Spectral Signatures to Distinguish Materials {#44-using-spectral-signatures-to-distinguish-materials}  
+
+Each material **absorbs and reflects** different **wavelengths** of electromagnetic radiation.  
+
+The **graph below** compares reflectance values across various materials:  
+
+![Spectral Signatures Graph](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image11.jpg)  
 
 ## 🔜 Next Sections  
 
@@ -293,29 +383,5 @@ In the following sections, we will explore:
 ➡️ **[Atmospheric Effects](#4-atmospheric-effects)**  
 ➡️ **[Passive vs. Active Imaging](#5-passive-vs-active-imaging)**  
 ➡️ **[Resolutions - Imaging Properties](#6-resolutions-imaging-properties)**  
-
-Stay tuned! 🚀  
-
-
----
-
-## 🔜 Next Sections  
-
-In the following sections, we will explore:  
-
-➡️ **[Atmospheric Effects](#4-atmospheric-effects)**  
-➡️ **[Passive vs. Active Imaging](#5-passive-vs-active-imaging)**  
-➡️ **[Resolutions - Imaging Properties](#6-resolutions-imaging-properties)** 
-
----
-
-## 🔜 Next Sections  
-
-In the following sections, we will explore:  
-
-➡️ **[Electromagnetic Radiation (EMR)](#2-electromagnetic-radiation-emr)**  
-➡️ **[Atmospheric Effects](#3-atmospheric-effects)**  
-➡️ **[Passive vs. Active Imaging](#4-passive-vs-active-imaging)**  
-➡️ **[Resolutions - Imaging Properties](#5-resolutions-imaging-properties)**  
 
 Stay tuned! 🚀  
