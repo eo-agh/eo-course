@@ -38,8 +38,7 @@ The quality and usability of remote sensing data depend on different resolution 
 📌 _In the next sections, we will explore each of these topics in detail with examples and illustrations._  
 
 ---
-
-## 🌍 What is Remote Sensing? {#what-is-remote-sensing}
+##  What is Remote Sensing? {#what-is-remote-sensing} 🌍
 
 Remote sensing is the **process of collecting information** about objects from a distance, without the need for physical contact. It is both a **science and an art**, as it involves obtaining and interpreting data about an object, area, or phenomenon through measurements made by instruments that are not in direct contact with the subject (Lillesand et al., 2015).
 
@@ -65,3 +64,35 @@ To perform remote sensing, three key components are required:
 3️⃣ **An instrument** – A sensor designed to detect and capture specific types of energy.  
 
 These instruments analyze different energy sources and provide insights into **environmental changes, land cover, vegetation health, and more**.  
+
+Oto zaktualizowana sekcja **Platforms** w formacie Markdown:  
+
+```markdown
+### 🛰️ Remote Sensing Platforms  
+
+Remote sensing platforms refer to the **carriers** that house cameras or sensors for data collection. These platforms can be **stationary** (e.g., cameras on tripods) or **mobile** (e.g., drones, aircraft, satellites). The choice of platform significantly affects the **type, scale, and frequency** of collected imagery.
+
+---
+
+### 📌 **Types of Remote Sensing Platforms**  
+
+1️⃣ **Ground-based platforms** 🌍 – Tripods, towers, and vehicles equipped with sensors for close-range remote sensing.  
+2️⃣ **Aerial platforms** ✈️ – Drones, airplanes, or balloons that operate within the atmosphere, capturing medium-scale imagery.  
+3️⃣ **Satellite platforms** 🛰️ – Orbiting satellites providing large-scale, repetitive coverage of Earth's surface.
+
+---
+
+### 💰 **Cost vs. Coverage Trade-off**  
+As a general rule, **higher altitude platforms** tend to be **more expensive** but **cover larger areas more efficiently**.  
+
+- A **handheld camera** is inexpensive but impractical for imaging large areas.  
+- A **drone** can capture high-resolution imagery at a regional scale.  
+- A **satellite** is costly to launch and maintain but can continuously monitor vast portions of the planet.
+
+📉 **Resolution Considerations**  
+The **farther a platform is from Earth**, the lower the spatial resolution tends to be. This means that each pixel in the image represents a larger surface area on Earth.
+
+![Platform Types](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image2.jpg)
+
+---
+
