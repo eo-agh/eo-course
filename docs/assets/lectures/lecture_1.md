@@ -300,10 +300,34 @@ For example:
 
 🟢 **Radiance**: A measure of the power of electromagnetic radiation emitted from an object per unit area for a given wavelength. In the visible spectrum, radiance is also described as the **brightness** of the source. It is directly proportional to **amplitude** (and intensity) of the wave.  
 
-⚪ **Surface Albedo**: The fraction of incident radiation that is **reflected by the Earth's surface** for a given location and time.  
-- **Values range from 0 to 1**, where:  
-  - **0** → The surface absorbs all radiation.  
-  - **1** → The surface reflects all radiation.  
+⚪ Surfaces do not only reflect light; they also **partially absorb it**.  
+
+During **absorption**, energy is taken up by the molecules of a material and transformed into **kinetic energy**. This increased molecular movement produces **heat**, which is radiated back to the surroundings.  
+
+📌 **Example:** A **black t-shirt** absorbs more sunlight than a **white t-shirt**, which is why we feel hotter wearing black in summer.  
+
+Albedo measures the **reflective properties** of materials across different spectral ranges:  
+- **Albedo = 100%** → No absorption, full reflection.  
+- **Albedo = 0%** → No reflection, full absorption.  
+
+| Material           | Albedo (%) |
+|-------------------|-----------|
+| **Snow**         | 80-90%    |
+| **Cloud**        | 60-90%    |
+| **Sand**         | 30%       |
+| **Meadow**       | 20%       |
+| **Forest**       | 5-18%     |
+| **Concrete**     | 15%       |
+| **Water (low angle)** | 22%   |
+| **Water (high angle)** | 5%   |
+
+![Seasonal Albedo Changes](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image12.jpg)
+
+**Surface Albedo**: The fraction of incident radiation that is **reflected by the Earth's surface** for a given location and time.  
+
+<video width="800" controls>
+  <source src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/videos/lecture1_video1.mp4" type="video/mp4">
+</video> 
 
 ---
 
@@ -333,6 +357,8 @@ The way **electromagnetic waves** interact with surfaces depends on their **roug
 **Remote sensors** are designed to detect **wavelengths** in particular parts of the **electromagnetic spectrum**. These instruments help **identify objects or materials** based on their spectral signatures.  
 
 Let's examine how different materials on Earth interact with **electromagnetic radiation** and define their unique spectral signatures:  
+
+![Spectral Signatures Example](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image12.jpg)
 
 ### 🍃 Vegetation  
 - Plants absorb **blue and red light** due to **photosynthesis**.  
@@ -374,7 +400,7 @@ Each material **absorbs and reflects** different **wavelengths** of electromagne
 
 The **graph below** compares reflectance values across various materials:  
 
-![Spectral Signatures Graph](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image11.jpg)  
+![Spectral Signatures Graph](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image13.jpg)  
 
 ## 🔜 Next Sections  
 
