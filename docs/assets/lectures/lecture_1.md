@@ -335,6 +335,8 @@ Albedo measures the **reflective properties** of materials across different spec
 
 The way **electromagnetic waves** interact with surfaces depends on their **roughness**. There are three main types of reflection:  
 
+![Reflection examples](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image18.gif)
+
 ### 1️⃣ **Specular Reflection** (Mirror-like)  
 - Occurs when light strikes a **smooth** surface.  
 - The **angle of incidence** is equal to the **angle of reflection**.  
@@ -401,6 +403,67 @@ Each material **absorbs and reflects** different **wavelengths** of electromagne
 The **graph below** compares reflectance values across various materials:  
 
 ![Spectral Signatures Graph](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image13.jpg)  
+
+
+# 4️⃣ Spectral Signatures {#4-spectral-signatures}  
+
+## 🛠️ 4.5 How to Measure Spectral Signature? {#46-how-to-measure-spectral-signature}  
+
+To analyze spectral signatures, scientists use **specialized instruments** that measure the **reflectance, absorption, and emission** properties of different materials. There are two main approaches to measuring spectral signatures:  
+
+---
+
+### 🌱 4.5.1 Field Measurements Using a Spectroradiometer  
+
+A **spectroradiometer** is an instrument used in **field conditions** to measure how different surfaces interact with light. These devices capture spectral signatures of vegetation, soil, water, and other materials **directly in their natural environment**.  
+
+📌 **Example: Measuring Spectral Signatures of Vegetation**  
+- Used to analyze plant health, chlorophyll content, and stress levels.  
+- Helps monitor **photosynthetic activity** by measuring **near-infrared (NIR) reflectance**.  
+- Data is used in applications like **precision agriculture, ecosystem monitoring, and climate studies**.  
+
+🔍 **Field Measurement Example:**  
+
+![Field Measurements](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image15.jpg)  
+
+---
+
+### 🧪 4.5.2 Laboratory Measurements Using a Hyperspectral Camera  
+
+In controlled laboratory environments, **hyperspectral cameras** capture spectral signatures with high precision. These cameras analyze **light interactions** across hundreds of spectral bands, allowing for highly detailed material classification.  
+
+📌 **Example: Measuring Spectral Properties of Samples in a Lab**  
+- Used for **soil, minerals, plant samples, and industrial materials**.  
+- Provides **high spectral resolution** for material classification and chemical analysis.  
+- Used in **geology, material science, agriculture, and environmental monitoring**.  
+
+🔍 **Hyperspectral Imaging Examples:**  
+
+![Lab Hyperspectral Camera](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image16.jpg)  
+![Lab Hyperspectral Sample](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image17.jpg)  
+![Hyperspectral Imaging Output](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image19.png)  
+
+---
+
+## 🎯 Why Is Spectral Signature Measurement Important?  
+
+✅ **Distinguishing materials based on their spectral properties**  
+✅ **Identifying plant stress, soil moisture, or water quality changes**  
+✅ **Enhancing remote sensing applications in agriculture, geology, and climate science**  
+✅ **Calibrating satellite and airborne remote sensing data for improved accuracy**  
+
+---
+
+## 🔜 Next Sections  
+
+In the following sections, we will explore:  
+
+➡️ **[Passive vs. Active Imaging](#5-passive-vs-active-imaging)**  
+➡️ **[Resolutions - Imaging Properties](#6-resolutions-imaging-properties)**  
+
+Stay tuned! 🚀  
+
+
 
 ## 🔜 Next Sections  
 
