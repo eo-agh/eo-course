@@ -454,23 +454,292 @@ In controlled laboratory environments, **hyperspectral cameras** capture spectra
 
 ---
 
-## 🔜 Next Sections  
+# 5️⃣ Passive vs. Active Imaging {#5-passive-vs-active-imaging}  
 
-In the following sections, we will explore:  
+## 🔍 5.1 Passive vs. Active Sensors  
 
-➡️ **[Passive vs. Active Imaging](#5-passive-vs-active-imaging)**  
-➡️ **[Resolutions - Imaging Properties](#6-resolutions-imaging-properties)**  
+The way a **remote sensing sensor** captures energy is categorized as either **passive** or **active**.  
 
-Stay tuned! 🚀  
+**Remote sensors detect electromagnetic radiation** to identify physical characteristics of an object. They either:  
+✅ **Use an external source of radiation**, most often the Sun (**passive sensors**).  
+✅ **Transmit their own energy** toward the object and measure the return (**active sensors**).  
+
+![Passive vs Active sensors](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image22.png)  
 
 
+📌 **Comparison of Passive and Active Sensors:**  
 
-## 🔜 Next Sections  
+| Sensor Type  | Energy Source | Day/Night Operation | Weather Dependency | Example Applications |
+|-------------|--------------|-------------------|-------------------|--------------------|
+| **Passive** | External (e.g., Sun) | Limited at night | Can be affected by clouds | Optical imagery, thermal sensing, vegetation health |
+| **Active** | Own energy source | Works day & night | Can operate in all weather conditions | Radar, LiDAR, altimetry |
 
-In the following sections, we will explore:  
+---
 
-➡️ **[Atmospheric Effects](#4-atmospheric-effects)**  
-➡️ **[Passive vs. Active Imaging](#5-passive-vs-active-imaging)**  
-➡️ **[Resolutions - Imaging Properties](#6-resolutions-imaging-properties)**  
+## ☀️ 5.2 Daytime Dependence of Passive Sensors  
 
-Stay tuned! 🚀  
+### 🌞 5.2.1 The Role of Natural Radiation  
+
+Passive remote sensing **relies solely on naturally occurring radiation**, primarily from the **Sun**. Unlike active sensors, passive instruments **do not emit their own pulses** of electromagnetic energy. This means that:  
+- **Passive optical sensors can only acquire data during the day.**  
+- **Without natural light, no radiation is reflected back to the sensor, rendering nighttime imaging impossible** (except in thermal infrared).  
+- **Atmospheric conditions** (e.g., cloud cover, haze) affect the **amount of sunlight reaching the Earth's surface**, which in turn **impacts image quality**.  
+
+However, **some passive sensors can operate at night**—for example, thermal infrared scanners that measure the **heat emitted from objects** rather than reflected sunlight.  
+
+📌 **Illustration: Conceptual operation of passive and active remote sensing instruments**  
+
+![Passive and Active Remote Sensing](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image20.gif)  
+
+---
+
+## 📡 5.3 Active Sensors  
+
+Active sensors **generate and transmit their own energy** toward a target, then detect the **reflected or scattered return signal**.  
+
+✅ **Advantages of Active Sensors:**  
+- Work **independently of sunlight** → Can operate **day and night**.  
+- Can **penetrate clouds, smoke, and even vegetation canopies** (especially radar-based sensors).  
+- Provide **3D surface mapping capabilities** (e.g., LiDAR, radar altimetry).  
+
+📷 **Examples of Active Sensors:**  
+- **Radar (Synthetic Aperture Radar - SAR)** – Used for Earth surface monitoring and disaster response.  
+- **LiDAR (Light Detection and Ranging)** – High-precision elevation mapping.  
+- **Altimeters** – Measure ocean height and ice sheet thickness.  
+
+---
+
+## 📷 5.4 Types of Passive Remote Sensing Instruments  
+
+Most **passive** remote sensing sensors are classified as either **multispectral (MS)** or **hyperspectral (HS)** instruments.  
+
+
+![Passive and Active Remote Sensing](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image21.jpg)  
+
+### 🎨 5.4.1 Multispectral Sensors  
+
+**Multispectral remote sensing** records data in **multiple spectral bands** of the electromagnetic spectrum.  
+- The first **multispectral satellite**, **Landsat’s Multispectral Scanner (MSS)**, was launched in **1972**.  
+- It recorded data in **four spectral bands** (**blue, green, red, and near-infrared**), which were crucial for **vegetation analysis**.  
+- Today’s advanced multispectral sensors, such as **Sentinel-2**, provide:  
+  - **13 spectral bands**  
+  - **High revisit times**  
+  - **Spatial resolution up to 10 meters**  
+
+📌 **Multispectral satellites like Sentinel-2 have revolutionized global remote sensing by providing frequent and detailed observations of land surfaces.**  
+
+---
+
+### 🌈 5.4.2 Hyperspectral Sensors  
+
+**Hyperspectral sensors** capture **hundreds** of narrow spectral bands, offering **finer spectral resolution** than multispectral sensors.  
+- Instead of just a few bands, hyperspectral sensors collect data across **the entire electromagnetic spectrum**, allowing for **detailed material classification**.  
+- **Hyperspectral imaging is particularly useful for:**  
+  ✅ Identifying specific minerals, water quality, and vegetation health.  
+  ✅ Detecting chemical compositions of materials.  
+  ✅ Monitoring environmental changes with greater precision.  
+
+📌 **Comparison of Multispectral vs. Hyperspectral Sensors:**  
+
+| Sensor Type   | Number of Bands | Spectral Band Width | Example Applications |
+|--------------|----------------|----------------------|----------------------|
+| **Multispectral** | 3-20 | 50-200 nm | Land cover mapping, vegetation health |
+| **Hyperspectral** | 100+ | 10-20 nm | Mineral identification, water quality |
+
+🔗 **Explore Interactive Spectral Visualization:**  
+For an interactive **visualization of the electromagnetic spectrum**, including spectral characteristics and wavelength manipulation, visit:  
+👉 [Interactive EMSpectrum Tool](https://ubcemergingmedialab.github.io/geomatics-textbook/viz/emspectrum-viz/)  
+
+# 6️⃣ Resolutions - Imaging Properties {#6-resolutions-imaging-properties}  
+
+## 📌 6.1 Introduction to Resolutions  
+
+One of the first considerations when using remotely sensed data is **data quality**. In scientific research, good quality data must be **relevant to the scale and time period** of the study. To achieve this, **remote sensing sensors are designed with specific applications in mind** and are characterized by **four key resolutions**:  
+
+1️⃣ **[Spatial Resolution](#61-spatial-resolution)** – Defines the smallest distinguishable detail in an image.  
+2️⃣ **[Temporal Resolution](#62-temporal-resolution)** – Refers to how often an area is imaged.  
+3️⃣ **[Spectral Resolution](#63-spectral-resolution)** – Determines the number and width of wavelength bands measured.  
+4️⃣ **[Radiometric Resolution](#64-radiometric-resolution)** – Defines a sensor’s ability to detect differences in energy intensity.  
+
+Each of these resolutions impacts the **type, accuracy, and usability** of remote sensing data for different applications.  
+
+---
+
+## 📷 6.1 Spatial Resolution {#61-spatial-resolution}  
+
+Spatial resolution refers to the **ground area represented by a single pixel** in an image.  
+- A **higher spatial resolution** means **finer details**, as each pixel covers a smaller area on the ground.  
+- A **lower spatial resolution** means **coarser details**, with each pixel covering a larger area.  
+
+### 🔍 6.1.1 Pixels and Image Formation  
+
+When a sensor collects data, it captures information from an **area of the Earth's surface**.  
+- This area could be as small as **a single tree** or as large as **an entire city**.  
+- All electromagnetic radiation (EMR) collected in this area is **averaged into a single pixel value**.  
+- An **image** is formed when **multiple pixels are collected over an area**.  
+
+📌 **Illustration: The concept of pixel size and spatial resolution**  
+
+![Spatial Resolution](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image24.jpg)  
+
+### 🏗️ 6.1.2 Factors Affecting Spatial Resolution  
+
+Several factors influence spatial resolution:  
+1️⃣ **Field of View (FOV)** – The area observed by the sensor, determined by its **viewing angle** and **altitude**.  
+2️⃣ **Instantaneous Field of View (IFOV)** – The area observed by the sensor at the moment a pixel is recorded.  
+3️⃣ **Altitude and Orbit** – Satellites at **higher altitudes** have **coarser resolution**, while **low-orbit sensors** capture **finer details**.  
+
+![FOV IFOV](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image26.jpg)  
+
+
+## 🎭 6.1.3 Mixed Pixels {#66-mixed-pixels}  
+
+### 🔍 What Are Mixed Pixels?  
+
+A **mixed pixel** occurs when a single pixel contains signals from **multiple surface types** rather than representing a single, uniform feature.  
+
+This happens when:  
+- The spatial resolution of the sensor is **too coarse** to distinguish fine details.  
+- Different land cover types (e.g., vegetation, water, soil) are present **within the same pixel area**.  
+- The transition between features (e.g., urban-rural boundaries, coastlines) is gradual rather than distinct.  
+
+📌 **Illustration: Mixed Pixels in Satellite Imagery**  
+
+![Mixed Pixels Example](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image22.jpg)  
+
+---
+
+### 🏗️ 6.1.4 Impact of Mixed Pixels  
+
+Mixed pixels can introduce **errors** in remote sensing analysis, as they:  
+✅ Reduce **classification accuracy**, making it difficult to assign a pixel to a single land cover class.  
+✅ Cause **spectral mixing**, where the recorded spectral signature is an average of multiple materials.  
+✅ Affect **change detection**, making it harder to track specific land cover transitions.  
+
+---
+
+### ⚖️ 6.1.35 Trade-offs in Spatial Resolution  
+
+✅ **Higher spatial resolution** provides **detailed imagery** but requires **more storage and processing power**.  
+✅ **Lower spatial resolution** is **easier to process** but may miss **small features**.  
+
+When choosing a **sensor for an application**, scientists balance **detail, processing efficiency, and study area coverage**.  
+
+---
+
+## 🕒 6.2 Temporal Resolution {#62-temporal-resolution}  
+
+Temporal resolution refers to the **time interval between successive observations of the same location**.  
+
+- It can range from **hours to years**, depending on the application, platform and sensor.  
+- It is essential for **monitoring changes over time** (e.g., urban growth, deforestation, climate change).  
+
+📌 **Common Temporal Resolutions in Remote Sensing:**  
+
+| Application | Temporal Resolution |
+|------------|--------------------|
+| **Weather Monitoring** | Hourly |
+| **Vegetation Growth & Crop Health** | Daily – Weekly |
+| **Urban Expansion Studies** | Annually |
+| **Climate Change Analysis** | Decadal |
+
+### 🌍 6.2.1 Revisit Time  
+
+Revisit time is the **interval between consecutive observations of the same location**.  
+- **Stationary sensors** (e.g., geostationary satellites) have **short revisit times** (seconds/minutes).  
+- **Orbiting sensors** may take **days or weeks** to return to the same location.  
+
+✅ **Some satellites (e.g., Sentinel-2) are designed for high temporal resolution**, ensuring frequent monitoring of Earth's surface.  
+
+---
+
+## 🌈 6.3 Spectral Resolution {#63-spectral-resolution}  
+
+Spectral resolution defines how a **sensor detects electromagnetic radiation (EMR) across different wavelengths**.  
+
+![Spectral resolution](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image27.jpg)  
+
+📌 **Spectral resolution refers to:**  
+1️⃣ **The number of spectral bands** a sensor detects.  
+2️⃣ **The location of bands along the electromagnetic spectrum**.  
+3️⃣ **The width of each spectral band** (narrow vs. wide).  
+
+### 📊 6.3.1 Spectral Bands and Energy Sensitivity  
+
+Each sensor records **specific wavelength ranges**, which determine what features can be observed.  
+- **Shorter wavelengths (e.g., blue light)** have **higher energy** and are **easier to detect**.  
+- **Longer wavelengths (e.g., thermal infrared, microwave)** require **larger band widths** for effective observation.  
+
+📌 **Example: Landsat Mission Sensors & Spectral Bands**  
+
+Landsat satellites have evolved to include more spectral bands:  
+- Landsat 1-5: **Multispectral Scanner System (MSS)**  
+- Landsat 4-5: **Thematic Mapper (TM)**  
+- Landsat 7: **Enhanced Thematic Mapper Plus (ETM+)**  
+
+📌 **Illustration: Spectral bands of Landsat sensors**  
+
+✅ **Sensors with higher spectral resolution** capture more bands and provide **richer spectral data** for classification.  
+
+---
+
+## 🎨 6.4 Radiometric Resolution {#64-radiometric-resolution}  
+
+Radiometric resolution determines a sensor’s **ability to detect small differences in energy intensity**.  
+- Incoming photons pass through a **filter**, allowing only specific wavelengths to reach the detector.  
+- The sensor assigns a **digital number (DN)** to each pixel, representing **energy intensity**.  
+
+### 🔢 6.4.1 Bits and Data Storage  
+
+Radiometric resolution is measured in **bits**, which define the number of **discernible energy levels**.  
+- **Higher bit depth** = **greater sensitivity to subtle differences**.  
+
+📌 **Common Radiometric Resolutions:**  
+
+| Bit Depth | Number of Discrete Levels | Example Applications |
+|----------|--------------------------|---------------------|
+| **8-bit** | 256 levels | Standard satellite imagery |
+| **12-bit** | 4,096 levels | Advanced environmental monitoring |
+| **16-bit** | 65,536 levels | High-precision scientific analysis |
+
+![Radiometric Resolution Example](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image28.jpg)  
+
+The left image is 16-bit radiometric resolution (65,536 discrete shades of grey), the center image is an 8-bit radiometric resolution (256 discrete shades of grey), the right image is 4-bit radiometric resolution (16 discrete shades of grey).
+
+### 🖼️ 6.4.2 Visualization of Radiometric Resolution  
+
+📌 **Illustration: Radiometric Resolution and Data Depth**  
+
+![Radiometric Resolution](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image26.jpg)  
+
+✅ **Higher radiometric resolution** allows for finer distinctions in brightness, improving image quality.  
+✅ **However, increasing resolution also increases data storage and processing requirements**.  
+
+---
+
+## 🔄 6.5 Summary: Choosing the Right Resolution  
+
+Each resolution influences **how remote sensing data is collected, processed, and applied**.  
+
+📌 **Key Takeaways:**  
+- **Spatial resolution** affects **detail level** – Higher resolution means finer details but larger storage requirements.  
+- **Temporal resolution** affects **frequency of observations** – Important for tracking changes over time.  
+- **Spectral resolution** affects **wavelength coverage** – Determines how well features can be distinguished.  
+- **Radiometric resolution** affects **energy detection sensitivity** – Impacts image clarity and depth.  
+
+✅ **Choosing the right sensor depends on the study's objectives and computational resources.**  
+
+---
+
+# 🎯 Remote Sensing Quiz  
+
+## 🛰️ Identify the Object in the Satellite Image  
+
+The following image is a **satellite image** taken from **Landsat-8**, orbiting **700 km above the ground**.  
+
+### 🔍 Can you identify what is inside the red circle?  
+
+![Landsat-8 Satellite Image](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image25.jpg)  
+![Sentinel-2](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image29.jpg)  
+![Dove](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image30.jpg)  
+
