@@ -1,49 +1,42 @@
-# **🛠️ Lab 0: Environment Setup & Configuration**  
+Here’s the introduction and summary for **Lecture 1: Fundamentals of Remote Sensing** in Markdown format:
 
-## **1. Objective**  
-Before we start working with satellite data, we need to set up the **development environment**.  
-This lab focuses on installing and configuring:  
-✅ **VS Code & GitHub** for version control.  
-✅ **Google Earth Engine (GEE)** for satellite data processing.  
-✅ **Google Colab** for cloud-based Python execution.  
-✅ **Miniconda & Python libraries** for geospatial analysis.  
+```markdown
+# 🛰️ Lecture 1: Fundamentals of Remote Sensing
 
----
+## 🎯 Learning Objectives
 
-## **2. Installing the Required Tools**  
+By the end of this lecture, you will understand:
 
-### **2.1. Code Editor: Visual Studio Code (VS Code)**  
-📌 **Download & Install VS Code**: [VS Code Download](https://code.visualstudio.com/)  
-
-After installation, install the following extensions:  
-- **Python Extension** – Enables Python scripting.  
-- **Jupyter Extension** – Enables Jupyter Notebook inside VS Code.  
-- **GitHub Copilot (Optional)** – AI-powered code assistance.  
+✅ **What remote sensing is** and its importance in Earth observation  
+✅ **The role of electromagnetic radiation (EMR)** in remote sensing  
+✅ **How the atmosphere affects remote sensing data**  
+✅ **The difference between passive and active remote sensing systems**  
+✅ **Key imaging properties**, including spatial, spectral, radiometric, and temporal resolution  
 
 ---
 
-### **2.2. Git & GitHub Setup**  
-We will use GitHub for project version control.  
+## 📌 Lecture Topics Overview
 
-📌 **Download & Install Git**: [Git Download](https://git-scm.com/downloads)  
+### 🌍 What is Remote Sensing?
+Remote sensing is the process of gathering information about an object or environment from a distance, typically using satellites, aircraft, or drones. It plays a crucial role in monitoring the Earth's surface, oceans, and atmosphere.
 
-📌 **Set up GitHub** (if you don’t have an account, create one at [GitHub](https://github.com/)):  
+### 🌞 Electromagnetic Radiation (EMR)
+Remote sensing relies on EMR, which travels in waves. Different sensors detect specific wavelengths, allowing them to capture different types of surface features.
 
-```
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
-## **3. Setting Up Python & Miniconda**  
+### 🌤️ Atmospheric Effects
+The atmosphere can absorb, scatter, or distort radiation before it reaches a sensor, influencing the quality of remote sensing data.
 
-### **3.1. Install Miniconda**  
-📌 **Download Miniconda**: [Miniconda Download](https://docs.conda.io/en/latest/miniconda.html)  
+### 📡 Passive vs. Active Imaging
+Remote sensing systems can be categorized into **passive** (relying on natural light sources, such as the Sun) and **active** (using their own energy source, such as radar or LiDAR).
 
-📌 **Create and activate an environment for the course:**  
-```
-conda create -n eo_lab python=3.9
-conda activate eo_lab
-```
+### 📏 Resolutions - Imaging Properties
+The quality and usability of remote sensing data depend on different resolution types:
+- **Spatial resolution** (image pixel size)
+- **Spectral resolution** (number of detected wavelengths)
+- **Radiometric resolution** (sensitivity to intensity differences)
+- **Temporal resolution** (frequency of data capture)
 
-```
-pip install geemap earthengine-api jupyterlab geopandas rasterio matplotlib numpy
-```
+---
+
+📌 _In the next sections, we will explore each of these topics in detail with examples and illustrations._  
+```  
