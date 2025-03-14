@@ -1,11 +1,10 @@
-
 # 🛰️ Lecture 1: Fundamentals of Remote Sensing
 
 ## 🎯 Learning Objectives
 
 By the end of this lecture, you will understand:
 
-✅ **What remote sensing is** and its importance in Earth observation  
+✅ **[What remote sensing is](#-what-is-remote-sensing)** and its importance in Earth observation  
 ✅ **The role of electromagnetic radiation (EMR)** in remote sensing  
 ✅ **How the atmosphere affects remote sensing data**  
 ✅ **The difference between passive and active remote sensing systems**  
@@ -15,7 +14,7 @@ By the end of this lecture, you will understand:
 
 ## 📌 Lecture Topics Overview
 
-### 🌍 What is Remote Sensing?
+### 🌍 [What is Remote Sensing?](#-what-is-remote-sensing)
 Remote sensing is the process of gathering information about an object or environment from a distance, typically using satellites, aircraft, or drones. It plays a crucial role in monitoring the Earth's surface, oceans, and atmosphere.
 
 ### 🌞 Electromagnetic Radiation (EMR)
@@ -38,11 +37,13 @@ The quality and usability of remote sensing data depend on different resolution 
 
 📌 _In the next sections, we will explore each of these topics in detail with examples and illustrations._  
 
+---
+
 ## 🌍 What is Remote Sensing?
 
 Remote sensing is the **process of collecting information** about objects from a distance, without the need for physical contact. It is both a **science and an art**, as it involves obtaining and interpreting data about an object, area, or phenomenon through measurements made by instruments that are not in direct contact with the subject (Lillesand et al., 2015).
 
-![Remote Sensing Illustration](assets/images/lecture1_image1.jpg)
+![Remote Sensing Illustration](./assets/images/lecture1_image1.jpg)
 
 ### 👁️ Detecting Light  
 
@@ -63,4 +64,3 @@ To perform remote sensing, three key components are required:
 3️⃣ **An instrument** – A sensor designed to detect and capture specific types of energy.  
 
 These instruments analyze different energy sources and provide insights into **environmental changes, land cover, vegetation health, and more**.  
-
