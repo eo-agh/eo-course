@@ -4,11 +4,11 @@
 
 By the end of this lecture, you will understand:  
 
-✅ **[What is Remote Sensing](#1-what-is-remote-sensing)** and its importance in Earth observation  
-✅ **[The role of electromagnetic radiation (EMR)](#2-electromagnetic-radiation-emr)** in remote sensing  
-✅ **[How the atmosphere affects remote sensing data](#3-atmospheric-effects)**  
-✅ **[The difference between passive and active remote sensing systems](#4-passive-vs-active-imaging)**  
-✅ **[Key imaging properties](#5-resolutions-imaging-properties)**, including spatial, spectral, radiometric, and temporal resolution  
+- **[What is Remote Sensing](#1-what-is-remote-sensing)** and its importance in Earth observation  
+- **[The role of electromagnetic radiation (EMR)](#2-electromagnetic-radiation-emr)** in remote sensing  
+- **[How the atmosphere affects remote sensing data](#3-atmospheric-effects)**  
+- **[The difference between passive and active remote sensing systems](#4-passive-vs-active-imaging)**  
+- **[Key imaging properties](#5-resolutions-imaging-properties)**, including spatial, spectral, radiometric, and temporal resolution  
 
 ---
 
@@ -22,17 +22,17 @@ By the end of this lecture, you will understand:
 
 ---
 
-## 1️⃣ What is Remote Sensing? {#1-what-is-remote-sensing} 🌍  
+## 1. What is Remote Sensing? {#1-what-is-remote-sensing} 🌍  
 
 Remote sensing is the **process of collecting information** about objects from a distance, without the need for physical contact. It is both a **science and an art**, as it involves obtaining and interpreting data about an object, area, or phenomenon through measurements made by instruments that are not in direct contact with the subject (Lillesand et al., 2015).  
 
 ![Remote Sensing Illustration](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image1.jpg)  
 
-### 👁️ 1.1 Detecting Light  
+###  1.1 Detecting Light  
 
 A simple example of remote sensing is **human vision**. Our eyes detect red, green, and blue light, and our brain processes these signals into the full range of visible colors. **Artificial remote sensing systems**, such as cameras, satellites, and sensors, work in a similar way—by detecting and interpreting different wavelengths of electromagnetic radiation.  
 
-### 🛰️ 1.2 How Remote Sensing Works  
+###  1.2 How Remote Sensing Works  
 
 Remote sensing allows scientists to monitor and analyze **Earth’s surface and atmosphere** by measuring the **reflected or emitted radiation** from various objects.  
 Drones, airplanes, and satellites equipped with specialized sensors capture this energy and translate it into usable data.  
@@ -42,19 +42,19 @@ This helps in characterizing different land areas, water bodies, and atmospheric
 
 ![Land Cover Example](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image2.png)  
 
-### 🔑 1.3 Essential Elements of Remote Sensing  
+###  1.3 Essential Elements of Remote Sensing  
 
 To perform remote sensing, three key components are required:  
 
-1️⃣ **A platform** – A carrier for the sensor, such as a satellite, drone, or aircraft.  
-2️⃣ **A target** – The object or area being observed (e.g., land surface, ocean, clouds).  
-3️⃣ **An instrument** – A sensor designed to detect and capture specific types of energy.  
+a. **A platform** – A carrier for the sensor, such as a satellite, drone, or aircraft.  
+b. **A target** – The object or area being observed (e.g., land surface, ocean, clouds).  
+3c. **An instrument** – A sensor designed to detect and capture specific types of energy.  
 
 These instruments analyze different energy sources and provide insights into **environmental changes, land cover, vegetation health, and more**.  
 
 ---
 
-## 2️⃣ Remote Sensing Platforms {#2-remote-sensing-platforms}  
+## 2. Remote Sensing Platforms {#2-remote-sensing-platforms}  
 
 Remote sensing platforms refer to the **carriers** that house cameras or sensors for data collection.  
 These platforms can be **stationary** (e.g., cameras on tripods) or **mobile** (e.g., drones, aircraft, satellites).  
@@ -62,20 +62,20 @@ The choice of platform significantly affects the **type, scale, and frequency** 
 
 ---
 
-### 📌 2.1 Types of Remote Sensing Platforms  
+### 2.1 Types of Remote Sensing Platforms  
 
-#### 1️⃣ Ground-Based Platforms 🌍  
+#### a. Ground-Based Platforms 
 - Tripods, towers, and vehicles equipped with sensors for close-range remote sensing.  
 
-#### 2️⃣ Aerial Platforms ✈️  
+#### b. Aerial Platforms 
 - Drones, airplanes, or balloons that operate within the atmosphere, capturing medium-scale imagery.  
 
-#### 3️⃣ Satellite Platforms 🛰️  
+#### c. Satellite Platforms   
 - Orbiting satellites providing large-scale, repetitive coverage of Earth's surface.  
 
 ---
 
-### 💰 2.2 Cost vs. Coverage Trade-off  
+###  2.2 Cost vs. Coverage Trade-off  
 
 As a general rule, **higher altitude platforms** tend to be **more expensive** but **cover larger areas more efficiently**.  
 
@@ -83,14 +83,14 @@ As a general rule, **higher altitude platforms** tend to be **more expensive** b
 - A **drone** can capture high-resolution imagery at a regional scale.  
 - A **satellite** is costly to launch and maintain but can continuously monitor vast portions of the planet.  
 
-📉 **Resolution Considerations**  
+ **Resolution Considerations**  
 The **farther a platform is from Earth**, the lower the spatial resolution tends to be.  
 This means that each pixel in the image represents a larger surface area on Earth.  
 
 ![Platform Types](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image3.png)  
 
 
-## 3️⃣ Electromagnetic Waves {#3-electromagnetic-waves} 🌊  
+## 3. Electromagnetic Waves {#3-electromagnetic-waves} 
 
 The application of remote sensing sensors and methods relies on the existence of **electromagnetic (EM) radiation**. Whether the radiation is passively measured (e.g., reflection of sunlight) or actively emitted from an instrument, **remote sensing cannot function without this source of energy**.  
 
@@ -98,7 +98,7 @@ But what exactly are **waves**?
 
 A **wave** is an undulating motion that transports **energy** in the direction of its propagation. A simple example of natural waves can be seen in **water waves** forming after a stone is thrown into a pond. Similarly, **sound waves** are created when we speak or when a police siren passes by.  
 
-### 🌞 3.1 Electromagnetic Wave Structure  
+###  3.1 Electromagnetic Wave Structure  
 
 Radiation from the Sun travels in the form of **electromagnetic waves**, where **electric** and **magnetic fields** are coupled together.  
 
@@ -112,16 +112,16 @@ The **electric field** oscillates in one plane, while the **magnetic field** osc
 
 ---
 
-### 📏 3.2 Wave Characteristics  
+###  3.2 Wave Characteristics  
 
 Electromagnetic waves are described by three fundamental properties:  
 
-1️⃣ **Frequency (ν)** – The number of wave cycles (marked by crests) that pass a point in a given time (usually per second).  
-2️⃣ **Wavelength (λ)** – The distance between two successive crests of a wave.  
+a. **Frequency (ν)** – The number of wave cycles (marked by crests) that pass a point in a given time (usually per second).  
+b. **Wavelength (λ)** – The distance between two successive crests of a wave.  
    - **Wavelength and frequency are inversely proportional**:  
      - Higher frequency → **shorter wavelength**  
      - Lower frequency → **longer wavelength**  
-3️⃣ **Amplitude (A)** – The height of the wave from its **rest position** to the **crest** (top) or **trough** (bottom).  
+c. **Amplitude (A)** – The height of the wave from its **rest position** to the **crest** (top) or **trough** (bottom).  
    - **Intensity** (important in remote sensing) is proportional to the square of the amplitude.  
 
 The relationship between these properties can be expressed as:  
@@ -131,7 +131,7 @@ The relationship between these properties can be expressed as:
 
 ---
 
-### 🔬 3.3 Energy and Wavelength  
+### 3.3 Energy and Wavelength  
 
 The **energy of a wave** is directly related to its frequency:  
 
@@ -154,7 +154,7 @@ Other devices, such as **radios**, **X-ray machines**, and **scientific instrume
 
 ---
 
-### 📊 3.4.1 Electromagnetic Spectrum Overview  
+###  3.4.1 Electromagnetic Spectrum Overview  
 
 The figure below illustrates the **different regions of the electromagnetic spectrum**, including their:  
 - **Names** (radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, gamma rays)  
@@ -168,7 +168,7 @@ It also highlights the **scale of objects** that can interact with each waveleng
 
 ---
 
-### 🔬 3.4.2 Wavelength, Frequency, and Energy Relationship  
+###  3.4.2 Wavelength, Frequency, and Energy Relationship  
 
 Now that we have discussed the **fundamental properties of EM waves**, we can explore how **photons** are distributed along the **electromagnetic spectrum (EMS)**.  
 
@@ -194,7 +194,7 @@ For example:
 ---
 
 
-### 🌞 3.4.3 The Primary Source of Electromagnetic Radiation {#53-the-primary-source-of-electromagnetic-radiation}  
+### 3.4.3 The Primary Source of Electromagnetic Radiation {#53-the-primary-source-of-electromagnetic-radiation}  
 
 The primary source of energy received on Earth is electromagnetic radiation emitted from the Sun.  
 
@@ -208,7 +208,7 @@ The Sun emits most of its energy at optical wavelengths, between 0.1 µm to 4 µ
 
 ---
 
-### 🔬 3.4.4 Absorption in the Atmosphere
+### 3.4.4 Absorption in the Atmosphere
 
 Understanding where our atmosphere absorbs different parts of the **electromagnetic radiation (EMR)** is crucial for interpreting signals received by **remote sensing instruments**.  
 
@@ -223,11 +223,11 @@ can **absorb energy** and contribute to **warming the planet**.
 
 When electromagnetic waves interact with different materials, they exhibit **predictable behaviors**:  
 
-1️⃣ **Reflection** – The wave bounces off a surface (important for optical remote sensing).  
-2️⃣ **Absorption** – The wave's energy is absorbed by the material.  
-3️⃣ **Scattering** – The wave changes direction randomly (e.g., atmospheric scattering).  
-4️⃣ **Transmission** – The wave passes through the material without being absorbed.  
-5️⃣ **Emission & Re-emission** – The material releases stored energy as electromagnetic radiation.  
+a. **Reflection** – The wave bounces off a surface (important for optical remote sensing).  
+b. **Absorption** – The wave's energy is absorbed by the material.  
+c. **Scattering** – The wave changes direction randomly (e.g., atmospheric scattering).  
+d. **Transmission** – The wave passes through the material without being absorbed.  
+e. **Emission & Re-emission** – The material releases stored energy as electromagnetic radiation.  
 
 These behaviors are critical in **remote sensing**, as they determine how energy interacts with Earth's surface and atmosphere, affecting how we interpret satellite imagery.  
 
@@ -235,7 +235,7 @@ These behaviors are critical in **remote sensing**, as they determine how energy
 
 ---
 
-### 🌍 3.4.4.1 Atmospheric Windows
+###  3.4.4.1 Atmospheric Windows
 
 From a **remote sensing perspective**, the goal is to use **wavelengths that avoid strong absorption regions** in the atmosphere.  
 
@@ -250,29 +250,29 @@ The **brown curve** in the diagram below represents the **opaqueness** of the at
 
 ---
 
-### 🔄 3.4.4.2 Selecting the Right Remote Sensing Instrument  
+###  3.4.4.2 Selecting the Right Remote Sensing Instrument  
 
 When designing or choosing **remote sensing sensors**, it is essential to carefully consider the following three questions:  
 
-1️⃣ **What is the spectral sensitivity of my sensor?**  
+1. **What is the spectral sensitivity of my sensor?**  
    - Does my sensor operate in a wavelength range affected by atmospheric absorption?  
 
-2️⃣ **Which atmospheric windows can be used with this sensor?**  
+2. **Which atmospheric windows can be used with this sensor?**  
    - Is my sensor designed to work in regions of high transmissivity?  
 
-3️⃣ **What is the source, magnitude, and composition of the outgoing signal we are aiming to analyze?**  
+3. **What is the source, magnitude, and composition of the outgoing signal we are aiming to analyze?**  
    - How does the atmosphere influence the signal we receive?  
 
 Selecting an appropriate sensor and **understanding atmospheric absorption** is critical to ensuring the accuracy of **Earth observation data**.  
 
 ---
 
-### 🔄 3.4.4.5 Why Is This Important for Remote Sensing?  
+###  3.4.4.5 Why Is This Important for Remote Sensing?  
 
 Understanding the **electromagnetic spectrum** is crucial for remote sensing because:  
-✅ Different materials interact with specific **wavelengths** of radiation.  
-✅ Sensors are designed to detect radiation at different **frequencies** (e.g., infrared for vegetation, microwaves for weather radar).  
-✅ The **Earth's atmosphere** absorbs certain wavelengths while allowing others to pass through (this is why certain satellites use infrared or microwave sensors to "see" through clouds).  
+a. Different materials interact with specific **wavelengths** of radiation.  
+b. Sensors are designed to detect radiation at different **frequencies** (e.g., infrared for vegetation, microwaves for weather radar).  
+c. The **Earth's atmosphere** absorbs certain wavelengths while allowing others to pass through (this is why certain satellites use infrared or microwave sensors to "see" through clouds).  
 
 This knowledge allows us to design **specialized remote sensing instruments** for applications such as:  
 🌱 **Vegetation monitoring** (infrared and near-infrared reflectance)  
@@ -282,9 +282,9 @@ This knowledge allows us to design **specialized remote sensing instruments** fo
 
 ---
 
-4️⃣ Spectral Signatures {#4-spectral-signatures}  
+## 4. Spectral Signatures {#4-spectral-signatures}  
 
-## 🔍 4.1 What are Spectral Signatures? {#41-what-are-spectral-signatures}  
+##  4.1 What are Spectral Signatures? {#41-what-are-spectral-signatures}  
 
 Different wavelengths of the **electromagnetic spectrum** interact **differently** with various materials on Earth's surface and in the atmosphere.  
 
@@ -296,15 +296,15 @@ For example:
 - Some materials have a **higher reflectance** at specific wavelengths.  
 - The **percent reflectance** is the ratio of **reflected energy** to the total incident energy at a given wavelength.  
 
-### 🔬 Key Concepts  
+###  Key Concepts  
 
-🟢 **Radiance**: A measure of the power of electromagnetic radiation emitted from an object per unit area for a given wavelength. In the visible spectrum, radiance is also described as the **brightness** of the source. It is directly proportional to **amplitude** (and intensity) of the wave.  
+a. **Radiance**: A measure of the power of electromagnetic radiation emitted from an object per unit area for a given wavelength. In the visible spectrum, radiance is also described as the **brightness** of the source. It is directly proportional to **amplitude** (and intensity) of the wave.  
 
-⚪ Surfaces do not only reflect light; they also **partially absorb it**.  
+Surfaces do not only reflect light; they also **partially absorb it**.  
 
 During **absorption**, energy is taken up by the molecules of a material and transformed into **kinetic energy**. This increased molecular movement produces **heat**, which is radiated back to the surroundings.  
 
-📌 **Example:** A **black t-shirt** absorbs more sunlight than a **white t-shirt**, which is why we feel hotter wearing black in summer.  
+ **Example:** A **black t-shirt** absorbs more sunlight than a **white t-shirt**, which is why we feel hotter wearing black in summer.  
 
 Albedo measures the **reflective properties** of materials across different spectral ranges:  
 - **Albedo = 100%** → No absorption, full reflection.  
@@ -331,30 +331,30 @@ Albedo measures the **reflective properties** of materials across different spec
 
 ---
 
-## 💡 4.2 Types of Reflection {#42-types-of-reflection}  
+##  4.2 Types of Reflection {#42-types-of-reflection}  
 
 The way **electromagnetic waves** interact with surfaces depends on their **roughness**. There are three main types of reflection:  
 
 ![Reflection examples](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image18.gif)
 
-### 1️⃣ **Specular Reflection** (Mirror-like)  
+### 1. **Specular Reflection** (Mirror-like)  
 - Occurs when light strikes a **smooth** surface.  
 - The **angle of incidence** is equal to the **angle of reflection**.  
 - Example: **Glass, still water, metal surfaces**.  
 
-### 2️⃣ **Diffuse Reflection**  
+### 2. **Diffuse Reflection**  
 - Happens on **rough** surfaces, scattering light in **all directions**.  
 - No clear angle of reflection.  
 - Example: **Concrete, vegetation, unpolished wood**.  
 
-### 3️⃣ **Mixed Reflection**  
+### 3. **Mixed Reflection**  
 - The most **common** type in nature.  
 - A combination of **specular and diffuse** reflection.  
 - Example: **Most natural surfaces like soil, rocks, leaves**.  
 
 ---
 
-## 🛰️ 4.3 Remote Sensing and Spectral Signatures {#43-remote-sensing-and-spectral-signatures}  
+##  4.3 Remote Sensing and Spectral Signatures {#43-remote-sensing-and-spectral-signatures}  
 
 **Remote sensors** are designed to detect **wavelengths** in particular parts of the **electromagnetic spectrum**. These instruments help **identify objects or materials** based on their spectral signatures.  
 
@@ -362,27 +362,27 @@ Let's examine how different materials on Earth interact with **electromagnetic r
 
 ![Spectral Signatures Example](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image12.jpg)
 
-### 🍃 Vegetation  
+### 1. Vegetation  
 - Plants absorb **blue and red light** due to **photosynthesis**.  
 - **Peak reflectance** occurs in the **green** region (which is why plants appear green).  
 - **Near-infrared (NIR) reflectance** is much **higher** than in the visible spectrum.  
 
 ---
 
-### 🌊 Water  
+### 2. Water  
 - **Clear water absorbs most radiation**, appearing dark.  
 - **Turbid water** reflects **more** light.  
 - **Algal blooms increase green reflectance**.  
 
 ---
 
-### 🏜️ Soil  
+### 3. Soil  
 - Soil **moisture content** impacts its spectral signature.  
 - **Dry soil** has **higher reflectance** than **wet soil**.  
 
 ---
 
-### ❄️ Ice & Snow  
+### 4. Ice & Snow  
 - **Fresh snow has high reflectance** across the visible and NIR regions.  
 - **Aged or dirty snow absorbs more radiation**, lowering reflectance.  
 
@@ -396,7 +396,7 @@ Let's examine how different materials on Earth interact with **electromagnetic r
 
 ---
 
-## 🎯 4.4 Using Spectral Signatures to Distinguish Materials {#44-using-spectral-signatures-to-distinguish-materials}  
+## 4.4 Using Spectral Signatures to Distinguish Materials {#44-using-spectral-signatures-to-distinguish-materials}  
 
 Each material **absorbs and reflects** different **wavelengths** of electromagnetic radiation.  
 
@@ -405,15 +405,13 @@ The **graph below** compares reflectance values across various materials:
 ![Spectral Signatures Graph](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image13.jpg)  
 
 
-# 4️⃣ Spectral Signatures {#4-spectral-signatures}  
-
-## 🛠️ 4.5 How to Measure Spectral Signature? {#46-how-to-measure-spectral-signature}  
+##  4.5 How to Measure Spectral Signature? {#46-how-to-measure-spectral-signature}  
 
 To analyze spectral signatures, scientists use **specialized instruments** that measure the **reflectance, absorption, and emission** properties of different materials. There are two main approaches to measuring spectral signatures:  
 
 ---
 
-### 🌱 4.5.1 Field Measurements Using a Spectroradiometer  
+###  4.5.1 Field Measurements Using a Spectroradiometer  
 
 A **spectroradiometer** is an instrument used in **field conditions** to measure how different surfaces interact with light. These devices capture spectral signatures of vegetation, soil, water, and other materials **directly in their natural environment**.  
 
@@ -428,7 +426,7 @@ A **spectroradiometer** is an instrument used in **field conditions** to measure
 
 ---
 
-### 🧪 4.5.2 Laboratory Measurements Using a Hyperspectral Camera  
+### 4.5.2 Laboratory Measurements Using a Hyperspectral Camera  
 
 In controlled laboratory environments, **hyperspectral cameras** capture spectral signatures with high precision. These cameras analyze **light interactions** across hundreds of spectral bands, allowing for highly detailed material classification.  
 
@@ -445,24 +443,24 @@ In controlled laboratory environments, **hyperspectral cameras** capture spectra
 
 ---
 
-## 🎯 Why Is Spectral Signature Measurement Important?  
+## Why Is Spectral Signature Measurement Important?  
 
-✅ **Distinguishing materials based on their spectral properties**  
-✅ **Identifying plant stress, soil moisture, or water quality changes**  
-✅ **Enhancing remote sensing applications in agriculture, geology, and climate science**  
-✅ **Calibrating satellite and airborne remote sensing data for improved accuracy**  
+1. **Distinguishing materials based on their spectral properties**  
+2. **Identifying plant stress, soil moisture, or water quality changes**  
+3. **Enhancing remote sensing applications in agriculture, geology, and climate science**  
+4. **Calibrating satellite and airborne remote sensing data for improved accuracy**  
 
 ---
 
-# 5️⃣ Passive vs. Active Imaging {#5-passive-vs-active-imaging}  
+# 5. Passive vs. Active Imaging {#5-passive-vs-active-imaging}  
 
-## 🔍 5.1 Passive vs. Active Sensors  
+##  5.1 Passive vs. Active Sensors  
 
 The way a **remote sensing sensor** captures energy is categorized as either **passive** or **active**.  
 
 **Remote sensors detect electromagnetic radiation** to identify physical characteristics of an object. They either:  
-✅ **Use an external source of radiation**, most often the Sun (**passive sensors**).  
-✅ **Transmit their own energy** toward the object and measure the return (**active sensors**).  
+a. **Use an external source of radiation**, most often the Sun (**passive sensors**).  
+b. **Transmit their own energy** toward the object and measure the return (**active sensors**).  
 
 ![Passive vs Active sensors](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image22.png)  
 
@@ -476,9 +474,9 @@ The way a **remote sensing sensor** captures energy is categorized as either **p
 
 ---
 
-## ☀️ 5.2 Daytime Dependence of Passive Sensors  
+##  5.2 Daytime Dependence of Passive Sensors  
 
-### 🌞 5.2.1 The Role of Natural Radiation  
+### 5.2.1 The Role of Natural Radiation  
 
 Passive remote sensing **relies solely on naturally occurring radiation**, primarily from the **Sun**. Unlike active sensors, passive instruments **do not emit their own pulses** of electromagnetic energy. This means that:  
 - **Passive optical sensors can only acquire data during the day.**  
@@ -493,30 +491,30 @@ However, **some passive sensors can operate at night**—for example, thermal in
 
 ---
 
-## 📡 5.3 Active Sensors  
+## 5.3 Active Sensors  
 
 Active sensors **generate and transmit their own energy** toward a target, then detect the **reflected or scattered return signal**.  
 
-✅ **Advantages of Active Sensors:**  
+a. **Advantages of Active Sensors:**  
 - Work **independently of sunlight** → Can operate **day and night**.  
 - Can **penetrate clouds, smoke, and even vegetation canopies** (especially radar-based sensors).  
 - Provide **3D surface mapping capabilities** (e.g., LiDAR, radar altimetry).  
 
-📷 **Examples of Active Sensors:**  
+b. **Examples of Active Sensors:**  
 - **Radar (Synthetic Aperture Radar - SAR)** – Used for Earth surface monitoring and disaster response.  
 - **LiDAR (Light Detection and Ranging)** – High-precision elevation mapping.  
 - **Altimeters** – Measure ocean height and ice sheet thickness.  
 
 ---
 
-## 📷 5.4 Types of Passive Remote Sensing Instruments  
+##  5.4 Types of Passive Remote Sensing Instruments  
 
 Most **passive** remote sensing sensors are classified as either **multispectral (MS)** or **hyperspectral (HS)** instruments.  
 
 
 ![Passive and Active Remote Sensing](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image21.jpg)  
 
-### 🎨 5.4.1 Multispectral Sensors  
+###  5.4.1 Multispectral Sensors  
 
 **Multispectral remote sensing** records data in **multiple spectral bands** of the electromagnetic spectrum.  
 - The first **multispectral satellite**, **Landsat’s Multispectral Scanner (MSS)**, was launched in **1972**.  
@@ -530,14 +528,14 @@ Most **passive** remote sensing sensors are classified as either **multispectral
 
 ---
 
-### 🌈 5.4.2 Hyperspectral Sensors  
+###  5.4.2 Hyperspectral Sensors  
 
 **Hyperspectral sensors** capture **hundreds** of narrow spectral bands, offering **finer spectral resolution** than multispectral sensors.  
 - Instead of just a few bands, hyperspectral sensors collect data across **the entire electromagnetic spectrum**, allowing for **detailed material classification**.  
 - **Hyperspectral imaging is particularly useful for:**  
-  ✅ Identifying specific minerals, water quality, and vegetation health.  
-  ✅ Detecting chemical compositions of materials.  
-  ✅ Monitoring environmental changes with greater precision.  
+  a. Identifying specific minerals, water quality, and vegetation health.  
+  b. Detecting chemical compositions of materials.  
+  c. Monitoring environmental changes with greater precision.  
 
 📌 **Comparison of Multispectral vs. Hyperspectral Sensors:**  
 
@@ -546,32 +544,31 @@ Most **passive** remote sensing sensors are classified as either **multispectral
 | **Multispectral** | 3-20 | 50-200 nm | Land cover mapping, vegetation health |
 | **Hyperspectral** | 100+ | 10-20 nm | Mineral identification, water quality |
 
-🔗 **Explore Interactive Spectral Visualization:**  
-For an interactive **visualization of the electromagnetic spectrum**, including spectral characteristics and wavelength manipulation, visit:  
-👉 [Interactive EMSpectrum Tool](https://ubcemergingmedialab.github.io/geomatics-textbook/viz/emspectrum-viz/)  
+**Explore Interactive Spectral Visualization:**  
+For an interactive **visualization of the electromagnetic spectrum**, including spectral characteristics and wavelength manipulation, visit:   [Interactive EMSpectrum Tool](https://ubcemergingmedialab.github.io/geomatics-textbook/viz/emspectrum-viz/)  
 
-# 6️⃣ Resolutions - Imaging Properties {#6-resolutions-imaging-properties}  
+# 6. Resolutions - Imaging Properties {#6-resolutions-imaging-properties}  
 
-## 📌 6.1 Introduction to Resolutions  
+## 6.1 Introduction to Resolutions  
 
 One of the first considerations when using remotely sensed data is **data quality**. In scientific research, good quality data must be **relevant to the scale and time period** of the study. To achieve this, **remote sensing sensors are designed with specific applications in mind** and are characterized by **four key resolutions**:  
 
-1️⃣ **[Spatial Resolution](#61-spatial-resolution)** – Defines the smallest distinguishable detail in an image.  
-2️⃣ **[Temporal Resolution](#62-temporal-resolution)** – Refers to how often an area is imaged.  
-3️⃣ **[Spectral Resolution](#63-spectral-resolution)** – Determines the number and width of wavelength bands measured.  
-4️⃣ **[Radiometric Resolution](#64-radiometric-resolution)** – Defines a sensor’s ability to detect differences in energy intensity.  
+1. **[Spatial Resolution](#61-spatial-resolution)** – Defines the smallest distinguishable detail in an image.  
+2. **[Temporal Resolution](#62-temporal-resolution)** – Refers to how often an area is imaged.  
+3. **[Spectral Resolution](#63-spectral-resolution)** – Determines the number and width of wavelength bands measured.  
+4. **[Radiometric Resolution](#64-radiometric-resolution)** – Defines a sensor’s ability to detect differences in energy intensity.  
 
 Each of these resolutions impacts the **type, accuracy, and usability** of remote sensing data for different applications.  
 
 ---
 
-## 📷 6.1 Spatial Resolution {#61-spatial-resolution}  
+##  6.1 Spatial Resolution {#61-spatial-resolution}  
 
 Spatial resolution refers to the **ground area represented by a single pixel** in an image.  
 - A **higher spatial resolution** means **finer details**, as each pixel covers a smaller area on the ground.  
 - A **lower spatial resolution** means **coarser details**, with each pixel covering a larger area.  
 
-### 🔍 6.1.1 Pixels and Image Formation  
+###  6.1.1 Pixels and Image Formation  
 
 When a sensor collects data, it captures information from an **area of the Earth's surface**.  
 - This area could be as small as **a single tree** or as large as **an entire city**.  
@@ -582,17 +579,17 @@ When a sensor collects data, it captures information from an **area of the Earth
 
 ![Spatial Resolution](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image24.jpg)  
 
-### 🏗️ 6.1.2 Factors Affecting Spatial Resolution  
+###  6.1.2 Factors Affecting Spatial Resolution  
 
 Several factors influence spatial resolution:  
-1️⃣ **Field of View (FOV)** – The area observed by the sensor, determined by its **viewing angle** and **altitude**.  
-2️⃣ **Instantaneous Field of View (IFOV)** – The area observed by the sensor at the moment a pixel is recorded.  
-3️⃣ **Altitude and Orbit** – Satellites at **higher altitudes** have **coarser resolution**, while **low-orbit sensors** capture **finer details**.  
+a. **Field of View (FOV)** – The area observed by the sensor, determined by its **viewing angle** and **altitude**.  
+b. **Instantaneous Field of View (IFOV)** – The area observed by the sensor at the moment a pixel is recorded.  
+c. **Altitude and Orbit** – Satellites at **higher altitudes** have **coarser resolution**, while **low-orbit sensors** capture **finer details**.  
 
 ![FOV IFOV](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image26.jpg)  
 
 
-## 🎭 6.1.3 Mixed Pixels {#66-mixed-pixels}  
+##  6.1.3 Mixed Pixels {#66-mixed-pixels}  
 
 ### 🔍 What Are Mixed Pixels?  
 
@@ -609,25 +606,25 @@ This happens when:
 
 ---
 
-### 🏗️ 6.1.4 Impact of Mixed Pixels  
+###  6.1.4 Impact of Mixed Pixels  
 
 Mixed pixels can introduce **errors** in remote sensing analysis, as they:  
-✅ Reduce **classification accuracy**, making it difficult to assign a pixel to a single land cover class.  
-✅ Cause **spectral mixing**, where the recorded spectral signature is an average of multiple materials.  
-✅ Affect **change detection**, making it harder to track specific land cover transitions.  
+a. Reduce **classification accuracy**, making it difficult to assign a pixel to a single land cover class.  
+b. Cause **spectral mixing**, where the recorded spectral signature is an average of multiple materials.  
+c. Affect **change detection**, making it harder to track specific land cover transitions.  
 
 ---
 
-### ⚖️ 6.1.35 Trade-offs in Spatial Resolution  
+###  6.1.5 Trade-offs in Spatial Resolution  
 
-✅ **Higher spatial resolution** provides **detailed imagery** but requires **more storage and processing power**.  
-✅ **Lower spatial resolution** is **easier to process** but may miss **small features**.  
+a. **Higher spatial resolution** provides **detailed imagery** but requires **more storage and processing power**.  
+b. **Lower spatial resolution** is **easier to process** but may miss **small features**.  
 
 When choosing a **sensor for an application**, scientists balance **detail, processing efficiency, and study area coverage**.  
 
 ---
 
-## 🕒 6.2 Temporal Resolution {#62-temporal-resolution}  
+##  6.2 Temporal Resolution {#62-temporal-resolution}  
 
 Temporal resolution refers to the **time interval between successive observations of the same location**.  
 
@@ -643,28 +640,28 @@ Temporal resolution refers to the **time interval between successive observation
 | **Urban Expansion Studies** | Annually |
 | **Climate Change Analysis** | Decadal |
 
-### 🌍 6.2.1 Revisit Time  
+###  6.2.1 Revisit Time  
 
 Revisit time is the **interval between consecutive observations of the same location**.  
 - **Stationary sensors** (e.g., geostationary satellites) have **short revisit times** (seconds/minutes).  
 - **Orbiting sensors** may take **days or weeks** to return to the same location.  
 
-✅ **Some satellites (e.g., Sentinel-2) are designed for high temporal resolution**, ensuring frequent monitoring of Earth's surface.  
+ **Some satellites (e.g., Sentinel-2) are designed for high temporal resolution**, ensuring frequent monitoring of Earth's surface.  
 
 ---
 
-## 🌈 6.3 Spectral Resolution {#63-spectral-resolution}  
+##  6.3 Spectral Resolution {#63-spectral-resolution}  
 
 Spectral resolution defines how a **sensor detects electromagnetic radiation (EMR) across different wavelengths**.  
 
 ![Spectral resolution](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image27.jpg)  
 
 📌 **Spectral resolution refers to:**  
-1️⃣ **The number of spectral bands** a sensor detects.  
-2️⃣ **The location of bands along the electromagnetic spectrum**.  
-3️⃣ **The width of each spectral band** (narrow vs. wide).  
+a. **The number of spectral bands** a sensor detects.  
+b. **The location of bands along the electromagnetic spectrum**.  
+c. **The width of each spectral band** (narrow vs. wide).  
 
-### 📊 6.3.1 Spectral Bands and Energy Sensitivity  
+###  6.3.1 Spectral Bands and Energy Sensitivity  
 
 Each sensor records **specific wavelength ranges**, which determine what features can be observed.  
 - **Shorter wavelengths (e.g., blue light)** have **higher energy** and are **easier to detect**.  
@@ -679,17 +676,17 @@ Landsat satellites have evolved to include more spectral bands:
 
 📌 **Illustration: Spectral bands of Landsat sensors**  
 
-✅ **Sensors with higher spectral resolution** capture more bands and provide **richer spectral data** for classification.  
+ **Sensors with higher spectral resolution** capture more bands and provide **richer spectral data** for classification.  
 
 ---
 
-## 🎨 6.4 Radiometric Resolution {#64-radiometric-resolution}  
+##  6.4 Radiometric Resolution {#64-radiometric-resolution}  
 
 Radiometric resolution determines a sensor’s **ability to detect small differences in energy intensity**.  
 - Incoming photons pass through a **filter**, allowing only specific wavelengths to reach the detector.  
 - The sensor assigns a **digital number (DN)** to each pixel, representing **energy intensity**.  
 
-### 🔢 6.4.1 Bits and Data Storage  
+###  6.4.1 Bits and Data Storage  
 
 Radiometric resolution is measured in **bits**, which define the number of **discernible energy levels**.  
 - **Higher bit depth** = **greater sensitivity to subtle differences**.  
@@ -706,18 +703,18 @@ Radiometric resolution is measured in **bits**, which define the number of **dis
 
 The left image is 16-bit radiometric resolution (65,536 discrete shades of grey), the center image is an 8-bit radiometric resolution (256 discrete shades of grey), the right image is 4-bit radiometric resolution (16 discrete shades of grey).
 
-### 🖼️ 6.4.2 Visualization of Radiometric Resolution  
+### 6.4.2 Visualization of Radiometric Resolution  
 
 📌 **Illustration: Radiometric Resolution and Data Depth**  
 
 ![Radiometric Resolution](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image26.jpg)  
 
-✅ **Higher radiometric resolution** allows for finer distinctions in brightness, improving image quality.  
-✅ **However, increasing resolution also increases data storage and processing requirements**.  
+a. **Higher radiometric resolution** allows for finer distinctions in brightness, improving image quality.  
+b. **However, increasing resolution also increases data storage and processing requirements**.  
 
 ---
 
-## 🔄 6.5 Summary: Choosing the Right Resolution  
+##  6.5 Summary: Choosing the Right Resolution  
 
 Each resolution influences **how remote sensing data is collected, processed, and applied**.  
 
@@ -727,7 +724,7 @@ Each resolution influences **how remote sensing data is collected, processed, an
 - **Spectral resolution** affects **wavelength coverage** – Determines how well features can be distinguished.  
 - **Radiometric resolution** affects **energy detection sensitivity** – Impacts image clarity and depth.  
 
-✅ **Choosing the right sensor depends on the study's objectives and computational resources.**  
+ **Choosing the right sensor depends on the study's objectives and computational resources!**  
 
 ---
 
