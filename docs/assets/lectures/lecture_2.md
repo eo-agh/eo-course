@@ -135,6 +135,7 @@ Where:
 – Values close to 1 indicate the highest possible density of green leaves.
 
 ![Spectral Indice Example 4](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture2_image14.png)
+
 Source credit: Robert Simmon
 
 **NDVI and seasonality**
@@ -142,6 +143,7 @@ Source credit: Robert Simmon
 Remote sensing is used to track the seasonal changes in vegetation. Monthly NDVI images from MODIS or Landsat can be used to monitor phenology.
 
 ![Spectral Indice Example 5](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture2_image15.png)
+
 NDVI Images of North America in Winter and Summer. Credit: spacegrant.montana.edu
 
 **How can we detect anomalies using NDVI?**
@@ -175,6 +177,7 @@ $$
 **Description:** Measures water turbidity. Higher positive values indicate higher turbidity (cloudy or sediment-rich water), while lower values suggest clearer water.
 
 ![Spectral Indice Example 10](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture2_image20.png)
+
 Lizcano-Sandoval, Luis & Anastasiou, Christopher & Montes, Enrique & Raulerson, Gary & Sherwood, Edward & Muller-Karger, Frank. (2022). Seagrass distribution, areal cover, and changes (1990–2021) in coastal waters off West-Central Florida, USA. Estuarine Coastal and Shelf Science. 279. 108134. 10.1016/j.ecss.2022.108134. 
 
 
@@ -202,6 +205,7 @@ $$
 **Description:** Highlights floating algae presence. Positive high values indicate floating algae blooms.
 
 ![Spectral Indice Example 10](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture2_image21.png)
+
 Zhao, Dan & Li, Junsheng & Hu, Rongming & Shen, Qian & Zhang, Fangfang. (2018). Landsat-satellite-based analysis of spatial–temporal dynamics and drivers of CyanoHABs in the plateau Lake Dianchi. International Journal of Remote Sensing. 39. 1-20. 10.1080/01431161.2018.1488289. 
 
 ---
@@ -215,6 +219,7 @@ $$
 **Description:** Similar to FAI, identifies floating algae on water surfaces. Positive values strongly indicate algae presence.
 
 ![Spectral Indice Example 11](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture2_image22.png)
+
 Descloitres, Jacques & Minghelli, Audrey & Steinmetz, François & Chevalier, Cristèle & Chami, Malik & Berline, Leo. (2021). Revisited Estimation of Moderate Resolution Sargassum Fractional Coverage Using Decametric Satellite Data (S2-MSI). Remote Sensing. 13. 5106. 10.3390/rs13245106. 
 
 ---
@@ -268,13 +273,14 @@ Land cover classification is the process of assigning each pixel in a satellite 
 **Example classification map:**
 
 ![LULC 1](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture2_image26.png)
+
 *Source: [Natural Resources Canada](https://natural-resources.canada.ca/maps-tools-publications/satellite-elevation-air-photos/image-classification-analysis)*
 
 ---
 
 ## 🎯 **Two Main Methods of Land Cover Classification**
 
-### 1️⃣ **Supervised Classification**
+### 1. **Supervised Classification**
 
 In supervised classification, the user selects example areas (known as training sites), each representing specific land cover classes. The algorithm analyzes the statistical properties of these samples to classify the entire image.
 
@@ -287,11 +293,12 @@ In supervised classification, the user selects example areas (known as training 
 **Supervised Classification example:**
 
 ![LULC 2](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture2_image27.png)
+
 *Source: [Natural Resources Canada](https://natural-resources.canada.ca/maps-tools-publications/satellite-elevation-air-photos/image-classification-analysis)*
 
 ---
 
-### 2️⃣ **Unsupervised Classification**
+### 2. **Unsupervised Classification**
 
 In unsupervised classification, the algorithm automatically groups pixels with similar spectral properties into clusters. After the algorithm generates these clusters, the user interprets them and assigns appropriate land cover classes.
 
@@ -300,7 +307,9 @@ In unsupervised classification, the algorithm automatically groups pixels with s
 - ISODATA
 
 **Unsupervised Classification example:**
+
 ![LULC 3](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture2_image28.png)
+
 *Source: [Natural Resources Canada](https://natural-resources.canada.ca/maps-tools-publications/satellite-elevation-air-photos/image-classification-analysis)*
 
 ---
@@ -325,11 +334,4 @@ Land cover classification is useful for:
 - Analyzing urbanization and impermeable surfaces
 - Agricultural mapping and crop classification
 
-**Example application (Urban Area Mapping):**
 
-![Urban Area Mapping](https://www.mdpi.com/remotesensing/remotesensing-12-02794/article_deploy/html/images/remotesensing-12-02794-g001.png)  
-*Source: [MDPI Remote Sensing](https://www.mdpi.com/2072-4292/12/17/2794)*
-
----
-
-```
