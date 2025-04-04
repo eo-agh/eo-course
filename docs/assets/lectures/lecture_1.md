@@ -703,12 +703,6 @@ Radiometric resolution is measured in **bits**, which define the number of **dis
 
 The left image is 16-bit radiometric resolution (65,536 discrete shades of grey), the center image is an 8-bit radiometric resolution (256 discrete shades of grey), the right image is 4-bit radiometric resolution (16 discrete shades of grey).
 
-### 6.4.2 Visualization of Radiometric Resolution  
-
-📌 **Illustration: Radiometric Resolution and Data Depth**  
-
-![Radiometric Resolution](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image26.jpg)  
-
 a. **Higher radiometric resolution** allows for finer distinctions in brightness, improving image quality.  
 b. **However, increasing resolution also increases data storage and processing requirements**.  
 
@@ -738,5 +732,5 @@ The following image is a **satellite image** taken from **Landsat-8**, orbiting 
 
 ![Landsat-8 Satellite Image](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image25.jpg)  
 ![Sentinel-2](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image29.jpg)  
-![Dove](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image30.jpg)  
+![Dove](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture1_image30.png)  
 
