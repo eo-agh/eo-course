@@ -46,4 +46,5 @@ nav:
   - Lectures:
       - Lecture 1: assets/lectures/lecture_1.md
       - Lecture 2: assets/lectures/lecture_2.md
+      - Lecture 3: assets/lectures/lecture_3.md
   - Contact: contact.md
