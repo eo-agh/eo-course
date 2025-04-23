@@ -1,0 +1,2253 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../lecture_2/">
+      
+      
+        <link rel="next" href="../../../contact/">
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Lecture 3 - Remote Sensing and Image Analysis in Space Tech</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lecture-3-satellite-image-preprocessing-fundamentals" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Remote Sensing and Image Analysis in Space Tech" class="md-header__button md-logo" aria-label="Remote Sensing and Image Analysis in Space Tech" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Remote Sensing and Image Analysis in Space Tech
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eo-agh/eo-labs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Remote Sensing and Image Analysis in Space Tech" class="md-nav__button md-logo" aria-label="Remote Sensing and Image Analysis in Space Tech" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Remote Sensing and Image Analysis in Space Tech
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eo-agh/eo-labs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Semester projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Labs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Labs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/lab_0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 0
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/lab_1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lectures
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Lectures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lecture 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lecture 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Lecture 3
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lecture 3
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-radiation-to-usable-data-the-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛰️ From Radiation to Usable Data: The Basics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocessing-radiometric-geometric-and-atmospheric-corrections" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Preprocessing: Radiometric, Geometric and Atmospheric Corrections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-interpretation-and-index-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Visual Interpretation and Index Calculations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Visual Interpretation and Index Calculations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometric-correction-detailed-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Correction – Detailed Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometric Correction – Detailed Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-geometric-distortion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources of Geometric Distortion:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective-of-geometric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 Objective of Geometric Correction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-steps-in-geometric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Key Steps in Geometric Correction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Key Steps in Geometric Correction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-georeferencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Georeferencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-coordinate-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Coordinate Transformation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-resampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Resampling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-of-geometric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output of Geometric Correction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-orthorectification-vs-georeferencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip: Orthorectification vs. Georeferencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radiometric-correction-detailed-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radiometric Correction – Detailed Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-radiance" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Radiance?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-reflectance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 What is Reflectance?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toa-reflectance-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      TOA Reflectance Equation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radiance-vs-reflectance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radiance vs. Reflectance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-apply-radiometric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Apply Radiometric Correction?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Tools and Platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atmospheric-correction-in-remote-sensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌤️ Atmospheric Correction in Remote Sensing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌤️ Atmospheric Correction in Remote Sensing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-atmospheric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why atmospheric correction?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toa-vs-sr-reflectance" class="md-nav__link">
+    <span class="md-ellipsis">
+      TOA vs. SR Reflectance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-compute-toa-reflectance-from-radiance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 – Compute TOA Reflectance from Radiance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-correct-toa-to-surface-reflectance-sr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 – Correct TOA to Surface Reflectance (SR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correction-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Correction Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Correction Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#empirical-method-dos-dark-object-subtraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Empirical Method – DOS (Dark Object Subtraction)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-model-6s-second-simulation-of-a-satellite-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Physical Model – 6S (Second Simulation of a Satellite Signal)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-temporal-physical-maja" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Multi-temporal + Physical – MAJA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-table-methods-compared" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Summary Table – Methods Compared
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-is-sr-necessary" class="md-nav__link">
+    <span class="md-ellipsis">
+      When is SR necessary?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-toa-vs-sr-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖼️ Example: TOA vs. SR Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing-levels-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Processing Levels Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pan-sharpening-optional-enhancement" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖼️ Pan-Sharpening (Optional Enhancement)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖼️ Pan-Sharpening (Optional Enhancement)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-panchromatic-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is panchromatic image?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-pan-sharpening" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Pan-Sharpening?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-pan-sharpening" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use Pan-Sharpening?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-landsat-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Example: Landsat 8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pan-sharpened-composite-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗺️ Pan-sharpened Composite Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-radiation-to-usable-data-the-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛰️ From Radiation to Usable Data: The Basics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preprocessing-radiometric-geometric-and-atmospheric-corrections" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Preprocessing: Radiometric, Geometric and Atmospheric Corrections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-interpretation-and-index-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Visual Interpretation and Index Calculations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Visual Interpretation and Index Calculations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometric-correction-detailed-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Correction – Detailed Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometric Correction – Detailed Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sources-of-geometric-distortion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources of Geometric Distortion:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective-of-geometric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 Objective of Geometric Correction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-steps-in-geometric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Key Steps in Geometric Correction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Key Steps in Geometric Correction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-georeferencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Georeferencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-coordinate-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Coordinate Transformation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-resampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Resampling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-of-geometric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output of Geometric Correction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tip-orthorectification-vs-georeferencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tip: Orthorectification vs. Georeferencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radiometric-correction-detailed-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radiometric Correction – Detailed Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-radiance" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Radiance?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-reflectance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 What is Reflectance?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toa-reflectance-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      TOA Reflectance Equation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#radiance-vs-reflectance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Radiance vs. Reflectance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-apply-radiometric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Apply Radiometric Correction?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools-and-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Tools and Platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atmospheric-correction-in-remote-sensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌤️ Atmospheric Correction in Remote Sensing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌤️ Atmospheric Correction in Remote Sensing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-atmospheric-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why atmospheric correction?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toa-vs-sr-reflectance" class="md-nav__link">
+    <span class="md-ellipsis">
+      TOA vs. SR Reflectance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-compute-toa-reflectance-from-radiance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 – Compute TOA Reflectance from Radiance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-correct-toa-to-surface-reflectance-sr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 – Correct TOA to Surface Reflectance (SR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correction-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Correction Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Correction Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#empirical-method-dos-dark-object-subtraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Empirical Method – DOS (Dark Object Subtraction)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-model-6s-second-simulation-of-a-satellite-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Physical Model – 6S (Second Simulation of a Satellite Signal)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-temporal-physical-maja" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Multi-temporal + Physical – MAJA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-table-methods-compared" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Summary Table – Methods Compared
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-is-sr-necessary" class="md-nav__link">
+    <span class="md-ellipsis">
+      When is SR necessary?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-toa-vs-sr-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖼️ Example: TOA vs. SR Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processing-levels-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Processing Levels Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pan-sharpening-optional-enhancement" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖼️ Pan-Sharpening (Optional Enhancement)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖼️ Pan-Sharpening (Optional Enhancement)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-panchromatic-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is panchromatic image?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-pan-sharpening" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Pan-Sharpening?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-pan-sharpening" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use Pan-Sharpening?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-landsat-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Example: Landsat 8
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pan-sharpened-composite-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗺️ Pan-sharpened Composite Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="lecture-3-satellite-image-preprocessing-fundamentals">📡 Lecture 3: Satellite Image Preprocessing – Fundamentals</h1>
+<h2 id="from-radiation-to-usable-data-the-basics">🛰️ From Radiation to Usable Data: The Basics</h2>
+<p>The extraction of information from digital remote sensing images is a multistep process. It starts from the moment electromagnetic radiation hits the sensor and ends with a final product ready for interpretation.</p>
+<p>The electromagnetic energy received by a satellite sensor (expressed in W/m²/sr) is converted into digital values using calibration curves. These values are stored as a sequence of bits and are referred to as <strong>Digital Numbers (DN)</strong>. Each DN value is proportional to the amount of energy received by the sensor.</p>
+<p>To visualize or process this data, it must first be transformed into a <strong>matrix of pixels</strong>, where each pixel holds a DN value. </p>
+<p><img alt="DN Example" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image1.jpg" />  </p>
+<p>The structure of a digital image is defined by its:</p>
+<ul>
+<li><strong>Spectral resolution</strong>: number of bands in which radiation is recorded  </li>
+<li><strong>Radiometric resolution</strong>: number of bits used to encode each pixel (e.g. 8-bit, 16-bit)  </li>
+<li><strong>Spatial resolution</strong>: the physical size of the area represented by a pixel  </li>
+<li><strong>Temporal resolution</strong>: how frequently data is acquired over the same area</li>
+</ul>
+<hr />
+<h2 id="preprocessing-radiometric-geometric-and-atmospheric-corrections">🔧 Preprocessing: Radiometric, Geometric and Atmospheric Corrections</h2>
+<p>Before analysis, satellite images require <strong>preprocessing</strong>, which includes:</p>
+<ul>
+<li><strong>Radiometric correction</strong>: transforms DN values into physical units such as reflectance, emissivity, or backscatter</li>
+<li><strong>Geometric correction</strong>: aligns the image to a coordinate system (e.g., UTM)</li>
+<li><strong>Atmospheric correction</strong>: removes the effects of the atmosphere (e.g., haze, scattering, absorption) to retrieve surface reflectance</li>
+</ul>
+<h2 id="visual-interpretation-and-index-calculations">🔍 Visual Interpretation and Index Calculations</h2>
+<p>Corrected images can be used for:</p>
+<ul>
+<li>Creating <strong>false color composites</strong></li>
+<li>Interpreting features visually</li>
+<li>Calculating spectral indices (NDVI, NDWI, NDSI) for:</li>
+<li>Vegetation monitoring</li>
+<li>Water and snow analysis</li>
+<li>Urbanization tracking</li>
+</ul>
+<hr />
+<h3 id="geometric-correction-detailed-overview">Geometric Correction – Detailed Overview</h3>
+<p>Geometric correction is a preprocessing step in satellite image analysis that addresses <strong>spatial distortions</strong> inherent in raw imagery. These distortions arise from several factors:</p>
+<h4 id="sources-of-geometric-distortion">Sources of Geometric Distortion:</h4>
+<ul>
+<li>Earth's curvature and rotation</li>
+<li>Sensor viewing geometry and motion</li>
+<li>Satellite orbital drift</li>
+<li>Terrain-induced displacements (parallax)</li>
+<li>Platform instability (e.g., roll, pitch, yaw of satellite)</li>
+</ul>
+<p>Without correction, features in an image may appear shifted, rotated, stretched, or compressed, and their positions may not match geographic coordinates or maps.</p>
+<h3 id="objective-of-geometric-correction">📍 Objective of Geometric Correction</h3>
+<p>The main goal is to transform the image from its original <strong>pixel coordinate system</strong> (row/column) into a <strong>map coordinate system</strong> (e.g., UTM, WGS84, PL-1992) so that:</p>
+<ul>
+<li>Pixels correspond to real-world locations</li>
+<li>The image can be used with other GIS datasets</li>
+<li>Distances, areas, and directions are meaningful</li>
+</ul>
+<h3 id="key-steps-in-geometric-correction">🔁 Key Steps in Geometric Correction</h3>
+<h4 id="1-georeferencing">1. <strong>Georeferencing</strong></h4>
+<p>Aligning the image to a map projection using reference points.</p>
+<ul>
+<li>Done using:</li>
+<li><strong>Orbital metadata</strong>: Satellite ephemeris + attitude</li>
+<li><strong>Ground Control Points (GCPs)</strong>: Known locations in both image and geographic space (e.g. road intersections, building corners)</li>
+</ul>
+<p><img alt="GCP" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image3.jpg" /><br />
+Credits: Daniel Moraite, https://daniel-moraite.medium.com/georeferencing-satellite-images-using-machine-learning-8f469f6e614</p>
+<h4 id="2-coordinate-transformation">2. <strong>Coordinate Transformation</strong></h4>
+<p>A <strong>mathematical function</strong> is used to convert image coordinates (row, col) to ground coordinates (X, Y). Common transformations include:</p>
+<ul>
+<li><strong>Affine transformation</strong> – allows translation, rotation, and scaling  </li>
+<li><strong>Polynomial transformations</strong> – 2nd or 3rd order to handle more complex distortions  </li>
+<li><strong>RPC (Rational Polynomial Coefficients)</strong> – model-based transformation used in high-resolution imagery</li>
+</ul>
+<p><img alt="Affine" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image4.png" /><br />
+Credits: Esri (2023)</p>
+<h4 id="3-resampling">3. <strong>Resampling</strong></h4>
+<p>Once transformation is applied, pixel values must be interpolated into a new, regular grid.</p>
+<p>Most of the projected raster elements of the new image will not match precisely with raster elements in the original image. Since raster data are stored in a regular row–column pattern, we need to calculate DNs for the pixel pattern of the corrected image intended. This calculation is performed by interpolation. This is called resampling of the original image.</p>
+<p>📌 Common resampling methods:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nearest Neighbor</strong></td>
+<td>Assigns value of closest input pixel</td>
+<td>Preserves DN for classification</td>
+</tr>
+<tr>
+<td><strong>Bilinear</strong></td>
+<td>Weighted average of 4 neighboring pixels</td>
+<td>Smooths image, good for visualization</td>
+</tr>
+<tr>
+<td><strong>Cubic Convolution</strong></td>
+<td>Uses 16 neighboring pixels</td>
+<td>Best for preserving edges in continuous data</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="NN" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image6.jpg" /><br />
+Credits: https://ltb.itc.utwente.nl/498/concept/81586</p>
+<p>For resampling, we usually use very simple interpolation methods, the main ones being nearest neighbour, bilinear, and bicubic interpolation (Figure 2). Consider the green grid to be the output image to be created. To determine the value of the centre pixel (bold), in nearest neighbour interpolation the value of the nearest original pixel is assigned, i.e. the value of the black pixel in this example. Note that the respective pixel centres, marked by small crosses, are always used for this process. In bilinear interpolation, a linear weighted average is calculated for the four nearest pixels in the original image (dark grey and black pixels). In bicubic interpolation a cubic weighted average of the values of 16 surrounding pixels (the black and all grey pixels) is calculated. Note that some software uses the terms “bilinear convolution” and “cubic convolution” instead of the terms introduced above.</p>
+<p>The choice of the resampling algorithm depends, among other things, on the ratio between input and output pixel size and the intended use of the resampled image. Nearest neighbour resampling can lead to the edges of features being offset in a step-like pattern. However, since the value of the original cell is assigned to a new cell without being changed, all spectral information is retained, which means that the resampled image is still useful in applications such as digital image classification. The spatial information, on the other hand, may be altered in this process, since some original pixels may be omitted from the output image, or appear twice. Bilinear and bicubic interpolation reduce this effect and lead to smoother images. However, because the values of a number of pixels are averaged, radiometric information is changed.</p>
+<p><img alt="NN" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image7.jpg" />  </p>
+<h3 id="output-of-geometric-correction">Output of Geometric Correction</h3>
+<p>The final product is an image:
+- <strong>Ortho-rectified</strong> (corrected for terrain distortions using DEM)
+- <strong>Georeferenced</strong> (aligned to geographic grid)
+- With a <strong>map projection</strong> (e.g., UTM, EPSG codes)
+- Usable in GIS and for further remote sensing analysis</p>
+<p><img alt="Geometric Correction" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image8.jpg" />  </p>
+<p>Credits: Wong, Man &amp; Zhu, Xiaolin &amp; Abbas, Sawaid &amp; Kwok, Coco Yin Tung &amp; Wang, Meilian. (2021). Optical Remote Sensing. 10.1007/978-981-15-8983-6_20. </p>
+<h3 id="tip-orthorectification-vs-georeferencing">Tip: Orthorectification vs. Georeferencing</h3>
+<p>Orthorectification is a process that corrects geometric distortions in satellite imagery, ensuring each point is represented as if it were captured directly below the sensor (nadir view). This process eliminates distortions caused by sensor tilt, terrain relief, and the curvature of the Earth, making the image scale uniform and aligned with the ground. </p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Georeferencing</strong></td>
+<td>Aligns image to geographic coordinates using GCPs or metadata</td>
+</tr>
+<tr>
+<td><strong>Orthorectification</strong></td>
+<td>Also removes terrain-induced distortions using DEM</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Most modern satellite products (e.g. Landsat L1T, Sentinel-2 L1C) are already orthorectified.</p>
+</blockquote>
+<p><img alt="Orto" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image8.jpg" />  </p>
+<h3 id="practical-example">Practical Example</h3>
+<p>An image acquired by Sentinel-2 (L1C level):
+- Has been geometrically corrected using orbital metadata and terrain models
+- Delivered in UTM projection (EPSG:32633 for Poland)
+- Ready for pixel-based analysis, time series, or mosaicking</p>
+<h3 id="summary">🔍 Summary</h3>
+<ul>
+<li>Geometric correction ensures spatial accuracy of satellite imagery</li>
+<li>It aligns raw data to geographic coordinates, enabling integration with maps and other datasets</li>
+<li>Essential for any analysis involving change detection, mapping, or measurement</li>
+<li>Modern sensors often deliver geometrically corrected products, but users must always verify projection, resolution, and alignment</li>
+</ul>
+<hr />
+<h3 id="radiometric-correction-detailed-overview">Radiometric Correction – Detailed Overview</h3>
+<p>Radiometric correction is a key preprocessing step that transforms raw digital values (DN – Digital Numbers) into physical units that describe the energy interaction between Earth's surface and the sensor.</p>
+<h3 id="objective">🎯 Objective</h3>
+<p>The goal is to:
+- Convert raw DN values into <strong>spectral radiance</strong> $$L_\lambda$$
+- Convert radiance into <strong>reflectance</strong> (specifically, <strong>Top-of-Atmosphere reflectance</strong> $$\rho_{TOA}$$)<br />
+- (Optionally) Perform atmospheric correction to obtain <strong>Surface Reflectance</strong> $$\rho_{SR}$$ </p>
+<h3 id="what-is-radiance">What is Radiance?</h3>
+<p>Radiance is the variable directly measured by remote sensing instruments. Basically, you can think of radiance as how much light the instrument "sees" from the object being observed. When looking through an atmosphere, some light scattered by the atmosphere will be seen by the instrument and included in the observed radiance of the target. An atmosphere will also absorb light, which will decrease the observed radiance. Radiance most often has units of watt/(steradian/square meter).</p>
+<p><strong>Radiance</strong> ((L_\lambda)) is the amount of electromagnetic energy received by the sensor <strong>per unit area</strong>, <strong>per unit solid angle</strong>, and <strong>per wavelength</strong>:</p>
+<p>$$
+L_\lambda \; \left[ \frac{W}{m^2 \cdot sr \cdot \mu m} \right]
+$$</p>
+<p>Where:
+- $$W$$ = watts (energy per second)<br />
+- $$m^2$$ = square meters of surface<br />
+- $$sr$$ = steradian (solid angle unit)<br />
+- $$\mu m$$ = micrometers (wavelength band) </p>
+<p><img alt="TOA" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image9.png" /><br />
+Credits: Mathworks</p>
+<p>Radiance is computed using <strong>sensor-specific calibration coefficients</strong> (gain and offset), provided in the metadata of the satellite image (e.g., MTL file for Landsat):</p>
+<p>$$
+L_\lambda = M_L \cdot \text{DN} + A_L
+$$</p>
+<p>Where:
+- $$M_L$$ = radiance multiplicative scaling factor<br />
+- $$A_L$$ = radiance additive scaling factor<br />
+- $$DN$$ = raw digital number  </p>
+<blockquote>
+<p>These calibration coefficients are specific for each band and sensor.</p>
+</blockquote>
+<h3 id="what-is-reflectance">🌍 What is Reflectance?</h3>
+<p>Reflectance is the ratio of the amount of light leaving a target to the amount of light striking the target. It has no units. If all of the light leaving the target is intercepted for the measurement of reflectance, the result is called "hemispherical reflectance."</p>
+<p><strong>Reflectance</strong> is the ratio of reflected to incoming solar radiation. It is <strong>dimensionless</strong> and normalized between 0 and 1:</p>
+<p>$$
+\rho = \frac{\text{Reflected Energy}}{\text{Incoming Energy}}
+$$</p>
+<p>TOA reflectance accounts for:
+- Variation in solar irradiance by wavelength
+- Solar zenith angle
+- Earth–Sun distance</p>
+<p>Reflectance (or more specifically hemispherical reflectance) is a property of the material being observed. Radiance, on the other hand, depends on the illumination (both its intensity and direction), the orientation and position of the target and the path of the light through the atmophere. With effort, many of the atmospheric effects and the solar illumination can be compensated for in remote sensing data. This yields something which is called "apparent reflectance," and it differs from true reflectance in that shadows and directional effects on reflectance have not been dealt with. Many people refer to this as "reflectance."</p>
+<p><strong>For many applications, radiance, reflectance, and apparent reflectance can be used interchangibly. However, since reflectance is a property of the target material itself, you will get the most reliable (and repeatable) vegetation index values using reflectance. Apparent reflectance is adequate in many cases.</strong></p>
+<h3 id="toa-reflectance-equation">TOA Reflectance Equation</h3>
+<p>Once radiance is computed, we normalize it to solar geometry and solar energy to get TOA reflectance:</p>
+<p>$$
+\rho_{TOA} = \frac{\pi \cdot L_\lambda \cdot d^2}{ESUN_\lambda \cdot \cos(\theta_s)}
+$$</p>
+<p><strong>Where:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$$\pi$$</td>
+<td>Mathematical constant (~3.1416), used to convert radiance to hemispherical reflectance</td>
+</tr>
+<tr>
+<td>$$L_\lambda$$</td>
+<td>Spectral radiance at the sensor (from DN)</td>
+</tr>
+<tr>
+<td>$$d$$</td>
+<td>Earth–Sun distance in astronomical units (AU), varies daily</td>
+</tr>
+<tr>
+<td>$$ESUN_\lambda$$</td>
+<td>Exoatmospheric solar irradiance for each band (provided in satellite documentation)</td>
+</tr>
+<tr>
+<td>$$\theta_s$$</td>
+<td>Solar zenith angle (angle between sun and vertical at image location)</td>
+</tr>
+</tbody>
+</table>
+<p>📌 The solar zenith angle and Earth–Sun distance are available in metadata or can be calculated from the image acquisition date and location.</p>
+<p><strong>Example Values (for Landsat 8)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Example Band 4 (Red) Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$$ESUN_\lambda$$</td>
+<td>2067 W/m²/μm</td>
+</tr>
+<tr>
+<td>$$d$$ (June)</td>
+<td>~0.967 AU</td>
+</tr>
+<tr>
+<td>$$\theta_s$$</td>
+<td>35° (varies with location/time)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="radiance-vs-reflectance">Radiance vs. Reflectance</h3>
+<p>Reflectance (or more specifically hemispherical reflectance) is a property of the material being observed. Radiance, on the other hand, depends on the illumination (both its intensity and direction), the orientation and position of the target and the path of the light through the atmophere. With effort, many of the atmospheric effects and the solar illumination can be compensated for in remote sensing data. This yields something which is called "apparent reflectance," and it differs from true reflectance in that shadows and directional effects on reflectance have not been dealt with. Many people refer to this as "reflectance."</p>
+<p>For many applications, radiance, reflectance, and apparent reflectance can be used interchangibly. However, since reflectance is a property of the target material itself, you will get the most reliable (and repeatable) vegetation index values using reflectance. Apparent reflectance is adequate in many cases.</p>
+<h3 id="why-apply-radiometric-correction">Why Apply Radiometric Correction?</h3>
+<ul>
+<li><strong>DNs are sensor-specific</strong> and not comparable across images</li>
+<li><strong>Radiance and reflectance are physical</strong>, standardized units</li>
+<li>Required for:</li>
+<li>Multi-temporal studies (e.g., vegetation trends)</li>
+<li>Multi-sensor analysis</li>
+<li>Deriving biophysical parameters</li>
+</ul>
+<h3 id="tools-and-platforms">🛠️ Tools and Platforms</h3>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Output</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Earth Engine</td>
+<td><code>TOA</code> or <code>SR</code> collections</td>
+<td>Sentinel-2, Landsat</td>
+</tr>
+<tr>
+<td>SNAP Toolbox</td>
+<td>TOA or SR</td>
+<td>ESA product processor</td>
+</tr>
+<tr>
+<td>Python (rasterio, numpy)</td>
+<td>Manual implementation</td>
+<td>Needs metadata access</td>
+</tr>
+</tbody>
+</table>
+<h3 id="summary_1">Summary</h3>
+<p>Radiometric correction consists of:</p>
+<ol>
+<li><strong>DN → Radiance</strong> using gain/offset from metadata  </li>
+<li><strong>Radiance → TOA Reflectance</strong> using solar geometry  </li>
+<li>(Optional) <strong>TOA → Surface Reflectance</strong> using atmospheric correction models  </li>
+</ol>
+<p>This process is crucial for ensuring that reflectance values are <strong>physically meaningful</strong> and <strong>comparable across space and time</strong>.</p>
+<hr />
+<h2 id="atmospheric-correction-in-remote-sensing">🌤️ Atmospheric Correction in Remote Sensing</h2>
+<h3 id="why-atmospheric-correction">Why atmospheric correction?</h3>
+<p>Atmosphere causes <strong>scattering</strong>, <strong>absorption</strong>, and <strong>refraction</strong> of solar radiation. These effects distort the true signal received by the satellite, especially in blue and near-infrared bands. As a result, the reflectance recorded at the satellite sensor (TOA) <strong>does not represent the real surface conditions</strong>.</p>
+<p>Atmospheric correction is essential when performing:</p>
+<ul>
+<li>Multi-temporal or seasonal comparisons</li>
+<li>Biophysical parameter estimation (e.g., LAI, FAPAR)</li>
+<li>Vegetation or water indices (e.g., NDVI, NDWI)</li>
+</ul>
+<h3 id="toa-vs-sr-reflectance">TOA vs. SR Reflectance</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TOA Reflectance</strong></td>
+<td>Top-of-Atmosphere reflectance – includes atmospheric effects</td>
+</tr>
+<tr>
+<td><strong>SR (Surface Reflectance)</strong></td>
+<td>Bottom-of-Atmosphere reflectance – after removing atmospheric distortion</td>
+</tr>
+</tbody>
+</table>
+<p>TOA radiance is every light which reflects off the planet as seen from space measured in radiance units.
+If you look at the planet from space (or if an instrument sensor takes an image) you see what's on the surface, but what you see of the surface it is foggy and bluish. That's because you see (or the sensor registers) mix of light reflected off the surface and off the atmosphere. In fact in the blue region of visible light, greater part of the light comes from atmosphere than from the surface.</p>
+<p>Atmospheric correction is then a method how to try to remove influence of just that portion of light reflected off atmosphere on the image and preserve the part reflected off the surface below (simplified to get the idea, because atmosphere does more than just reflecting part of the incoming light).</p>
+<p>This way you get BOA (bottom of atmosphere) or surface radiance. The same applies to TOA and BOA/surface reflectance.</p>
+<p><img alt="TOA vs SR" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image10.jpg" /><br />
+Credits: Masek et al. (2006) A Landsat Surface Reflectance Data Set for North America, 1990–2000</p>
+<blockquote>
+<p>TOA values tend to be higher and affected by haze, water vapor, and aerosols. SR reflectance is essential for <strong>accurate, quantitative analysis</strong>.</p>
+</blockquote>
+<h3 id="step-1-compute-toa-reflectance-from-radiance">Step 1 – Compute TOA Reflectance from Radiance</h3>
+<p>Before correcting to Surface Reflectance (SR), we first compute <strong>Top-of-Atmosphere Reflectance (TOA)</strong> from spectral radiance (see <strong>Radiometric correction</strong> section)</p>
+<blockquote>
+<p>TOA reflectance is standardized across dates and locations, but still includes <strong>atmospheric distortion</strong> – hence the need for further correction to SR!</p>
+</blockquote>
+<h3 id="step-2-correct-toa-to-surface-reflectance-sr">Step 2 – Correct TOA to Surface Reflectance (SR)</h3>
+<p>Once we have TOA reflectance, we apply an atmospheric correction model to obtain <strong>true surface reflectance</strong>:</p>
+<p>$$
+\rho_{SR} = \frac{\pi \cdot (L_\lambda - L_p)}{T_z \cdot (E_{down} + ESUN_\lambda \cdot \cos(\theta_s) \cdot T_n)}
+$$</p>
+<p>This removes:
+- $$L_p$$: path radiance (backscatter from atmosphere)<br />
+- $$T_z$$, $$T_n$$: atmospheric transmittance (upward/downward)<br />
+- $$E_{down}$$: diffuse irradiance from the sky  </p>
+<h3 id="correction-methods">🛠️ Correction Methods</h3>
+<p>There are several methods to perform atmospheric correction, grouped into two broad categories:</p>
+<h4 id="empirical-method-dos-dark-object-subtraction">🔹 Empirical Method – DOS (Dark Object Subtraction)</h4>
+<p><strong>Type:</strong> Empirical<br />
+<strong>Idea:</strong> Assumes that dark objects (e.g., water, deep shadows) should have near-zero reflectance. Any signal from them is due to atmospheric scattering and should be subtracted.</p>
+<p><strong>Steps:</strong>
+1. Find minimum DN (or radiance) in each band.
+2. Subtract this value from all pixels (assuming it's path radiance).</p>
+<p><strong>Pros:</strong><br />
+- Simple, fast, and requires no external data</p>
+<p><strong>Cons:</strong><br />
+- Low accuracy<br />
+- Assumes perfect dark objects are present<br />
+- Not suitable for precise or temporal analysis</p>
+<p>Used in: <strong>QGIS SCP</strong>, basic correction pipelines</p>
+<hr />
+<h4 id="physical-model-6s-second-simulation-of-a-satellite-signal">🔹 Physical Model – 6S (Second Simulation of a Satellite Signal)</h4>
+<p><strong>Type:</strong> Radiative transfer model<br />
+<strong>Idea:</strong> Simulates light scattering and absorption through the atmosphere using real atmospheric parameters.</p>
+<p><strong>Inputs Required:</strong>
+- Aerosol Optical Thickness (AOT)<br />
+- Water vapor and ozone content<br />
+- Solar and view geometry<br />
+- Sensor-specific response functions</p>
+<p><strong>Pros:</strong><br />
+- Accurate and sensor-specific<br />
+- Suitable for quantitative applications</p>
+<p><strong>Cons:</strong><br />
+- Requires atmospheric data<br />
+- More complex to implement</p>
+<p>Used in: <strong>ENVI FLAASH</strong>, <strong>Py6S</strong>, <strong>Snap</strong>, research workflows</p>
+<hr />
+<h4 id="multi-temporal-physical-maja">🔹 Multi-temporal + Physical – MAJA</h4>
+<p><strong>Type:</strong> Hybrid (temporal + physical model)<br />
+<strong>Idea:</strong> Uses past cloud-free observations and physical modeling for better correction over time series.</p>
+<p><strong>Features:</strong>
+- Combines radiative transfer with multi-date cloud/shadow analysis<br />
+- Uses DEM (e.g., SRTM) for topographic correction<br />
+- Supports Sentinel-2 and SPOT-6/7</p>
+<p><strong>Pros:</strong><br />
+- Very robust for time-series<br />
+- Cloud-resistant and topography-aware</p>
+<p><strong>Cons:</strong><br />
+- Requires multiple scenes<br />
+- Heavier computational pipeline</p>
+<p>Used in: <strong>THEIA</strong>, <strong>CNES workflows</strong>, some GEE L2A products</p>
+<hr />
+<h3 id="summary-table-methods-compared">🧭 Summary Table – Methods Compared</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Type</th>
+<th>Accuracy</th>
+<th>Data Required</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DOS</strong></td>
+<td>Empirical</td>
+<td>⭐</td>
+<td>None</td>
+<td>Visualization, quick tests</td>
+</tr>
+<tr>
+<td><strong>6S</strong></td>
+<td>Physical model</td>
+<td>⭐⭐⭐⭐</td>
+<td>AOT, water vapor, geometry</td>
+<td>Research, accurate NDVI, indices</td>
+</tr>
+<tr>
+<td><strong>MAJA</strong></td>
+<td>Physical + temporal</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>Time series, DEM</td>
+<td>Sentinel-2 time series, long-term monitoring</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-is-sr-necessary">When is SR necessary?</h3>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>TOA OK?</th>
+<th>SR Needed?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visualization</td>
+<td>✅ Yes</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>NDVI, NDWI analysis</td>
+<td>❌ No</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Change detection</td>
+<td>❌ No</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Machine learning input</td>
+<td>❌ No</td>
+<td>✅ Yes</td>
+</tr>
+</tbody>
+</table>
+<p>-</p>
+<h3 id="example-toa-vs-sr-comparison">🖼️ Example: TOA vs. SR Comparison</h3>
+<p><img alt="TOA vs SR" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image11.jpg" /><br />
+Credits: USGHS</p>
+<blockquote>
+<p><strong>Left</strong>: TOA reflectance affected by haze and atmosphere<br />
+<strong>Right</strong>: SR reflectance, corrected and ready for NDVI/analysis</p>
+</blockquote>
+<h2 id="processing-levels-overview">🔢 Processing Levels Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>Raw DN</td>
+</tr>
+<tr>
+<td><strong>1A</strong></td>
+<td>Radiometrically calibrated, uncorrected geometry</td>
+</tr>
+<tr>
+<td><strong>1C</strong></td>
+<td>TOA reflectance, orthorectified</td>
+</tr>
+<tr>
+<td><strong>2A</strong></td>
+<td>SR, atmospheric correction applied</td>
+</tr>
+<tr>
+<td><strong>3+</strong></td>
+<td>Final maps, indices, classification results</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pan-sharpening-optional-enhancement">🖼️ Pan-Sharpening (Optional Enhancement)</h2>
+<h3 id="what-is-panchromatic-image">What is panchromatic image?</h3>
+<p>A panchromatic image uses a single band that combines Red, Green, and Blue bands, allowing for a greater spatial resolution. The resulting image does not contain any wavelength-specific information.</p>
+<h3 id="what-is-pan-sharpening">What is Pan-Sharpening?</h3>
+<p><strong>Pan-sharpening</strong> is a remote sensing technique that <strong>fuses a high-resolution panchromatic (PAN) image</strong> with <strong>lower-resolution multispectral (MS) bands</strong> to produce a <strong>sharper, high-resolution color image</strong>.</p>
+<p>The goal is to combine:
+- <strong>Geometric detail</strong> from the PAN band<br />
+- <strong>Spectral (color) fidelity</strong> from the MS bands</p>
+<p>This results in a visually rich image that preserves both spatial detail and color information.</p>
+<h3 id="how-it-works">How It Works</h3>
+<p>Let’s say:
+- PAN band has <strong>15 m resolution</strong>
+- RGB bands (MS) have <strong>30 m resolution</strong></p>
+<p>Pan-sharpening increases the resolution of the RGB image to match that of the PAN band (15 m), producing a high-resolution color composite.</p>
+<p><img alt="Pansharpening" src="https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image12.gif" />  </p>
+<p>Algorithms often used:
+- Brovey Transform<br />
+- Gram-Schmidt Spectral Sharpening<br />
+- Principal Component Analysis (PCA)<br />
+- Intensity-Hue-Saturation (IHS) fusion<br />
+- Simple Mean/Weighted Average</p>
+<h3 id="why-use-pan-sharpening">Why Use Pan-Sharpening?</h3>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Urban studies</strong></td>
+<td>Visualize buildings, roads, rooftops clearly</td>
+</tr>
+<tr>
+<td><strong>Change detection</strong></td>
+<td>Identify construction, infrastructure evolution</td>
+</tr>
+<tr>
+<td><strong>Cartographic mapping</strong></td>
+<td>Produce high-quality true/false color maps</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Better delineation of field boundaries, coastlines</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-landsat-8">🎨 Example: Landsat 8</h3>
+<ul>
+<li><strong>Band 8</strong> (PAN) → 15 m  </li>
+<li><strong>Bands 4-3-2</strong> (RGB) → 30 m<br />
+→ Use pan-sharpening to generate 15 m RGB composite.</li>
+</ul>
+<p>Example in <code>rasterio</code> and <code>NumPy</code> (simplified approach):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">rasterio</span>
+
+<span class="c1"># Load PAN and RGB bands</span>
+<span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;B8_pan.tif&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">pan_src</span><span class="p">:</span>
+    <span class="n">pan</span> <span class="o">=</span> <span class="n">pan_src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;B4_red.tif&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">r_src</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">r_src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;B3_green.tif&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">g_src</span><span class="p">:</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">g_src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;B2_blue.tif&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">b_src</span><span class="p">:</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">b_src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+<span class="c1"># Simple mean-based pan-sharpening (just for demo)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pansharpen</span><span class="p">(</span><span class="n">pan</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">intensity</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="n">g</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+    <span class="n">r_sharp</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="p">(</span><span class="n">pan</span> <span class="o">/</span> <span class="n">intensity</span><span class="p">)</span>
+    <span class="n">g_sharp</span> <span class="o">=</span> <span class="n">g</span> <span class="o">*</span> <span class="p">(</span><span class="n">pan</span> <span class="o">/</span> <span class="n">intensity</span><span class="p">)</span>
+    <span class="n">b_sharp</span> <span class="o">=</span> <span class="n">b</span> <span class="o">*</span> <span class="p">(</span><span class="n">pan</span> <span class="o">/</span> <span class="n">intensity</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">r_sharp</span><span class="p">,</span> <span class="n">g_sharp</span><span class="p">,</span> <span class="n">b_sharp</span>
+
+<span class="n">r_ps</span><span class="p">,</span> <span class="n">g_ps</span><span class="p">,</span> <span class="n">b_ps</span> <span class="o">=</span> <span class="n">pansharpen</span><span class="p">(</span><span class="n">pan</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>For real-world applications, use advanced methods (e.g., <code>gdal_pansharpen.py</code>, Orfeo Toolbox, or ENVI).</p>
+</blockquote>
+<hr />
+<h3 id="limitations">Limitations</h3>
+<ul>
+<li>Can distort <strong>spectral accuracy</strong> – not suitable for quantitative analysis  </li>
+<li>Not a substitute for real high-res multispectral sensors  </li>
+<li>Performance varies depending on land cover and method used</li>
+</ul>
+<hr />
+<h3 id="summary_2">Summary</h3>
+<table>
+<thead>
+<tr>
+<th>✅ Pros</th>
+<th>❌ Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enhanced visual quality</td>
+<td>May distort spectral signatures</td>
+</tr>
+<tr>
+<td>Reveals fine-scale urban details</td>
+<td>Not ideal for index calculations</td>
+</tr>
+<tr>
+<td>Great for map production</td>
+<td>Requires careful method selection</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="pan-sharpened-composite-example">🗺️ Pan-sharpened Composite Example</h3>
+<p><img alt="Pan-sharpened urban image" src="https://www.researchgate.net/profile/Masroor-Ahmed-9/publication/349845964/figure/fig4/AS:1004562200281090@1614932119782/A-pansharpened-false-color-composite-using-Landsat-8-Oli-data-and-Brovey-Transform.png" /></p>
+<blockquote>
+<p><em>False-color pan-sharpened image from Landsat 8 – enhanced building visibility (Ahmed et al., 2021)</em></p>
+</blockquote>
+<h2 id="summary_3">Summary</h2>
+<ul>
+<li>Satellite images must be radiometrically, geometrically and atmospherically corrected</li>
+<li>TOA → SR correction is essential for quantitative use</li>
+<li>Various methods (model-based, empirical) are available</li>
+<li>Understanding processing levels helps in selecting appropriate datasets</li>
+</ul>
+<hr />
+<h3 id="references">📚 References</h3>
+<ul>
+<li>Landsat 8 Handbook (NASA, 2020)  </li>
+<li>Chander et al. (2009). Summary of current radiometric calibration coefficients for Landsat MSS, TM, ETM+</li>
+<li>Vermote et al. (1997). Second Simulation of the Satellite Signal in the Solar Spectrum (6S)</li>
+<li>Chavez (1988). Improved Dark Object Subtraction  </li>
+<li>Vermote et al. (1997). 6S Model  </li>
+<li>Hagolle et al. (2015). MAJA atmospheric correction  </li>
+<li>ESA Sentinel-2 Handbook  </li>
+<li>Py6S Documentation: https://py6s.readthedocs.io  </li>
+<li>MAJA: https://maja.readthedocs.io  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2025 AGH UST
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
