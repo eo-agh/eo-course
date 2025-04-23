@@ -118,7 +118,7 @@ The final product is an image:
 - Usable in GIS and for further remote sensing analysis
 
 
-![Geometric Correction](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image1.jpg)  
+![Geometric Correction](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image8.jpg)  
 
 Credits: Wong, Man & Zhu, Xiaolin & Abbas, Sawaid & Kwok, Coco Yin Tung & Wang, Meilian. (2021). Optical Remote Sensing. 10.1007/978-981-15-8983-6_20. 
 
