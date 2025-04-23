@@ -159,9 +159,9 @@ Radiometric correction is a key preprocessing step that transforms raw digital v
 ### 🎯 Objective
 
 The goal is to:
-- Convert raw DN values into **spectral radiance** \((L_\lambda)\)
-- Convert radiance into **reflectance** (specifically, **Top-of-Atmosphere reflectance** \(\rho_{TOA}\))
-- (Optionally) Perform atmospheric correction to obtain **Surface Reflectance** \(\rho_{SR}\)
+- Convert raw DN values into **spectral radiance** $$L_\lambda$$
+- Convert radiance into **reflectance** (specifically, **Top-of-Atmosphere reflectance** $$\rho_{TOA}$$)  
+- (Optionally) Perform atmospheric correction to obtain **Surface Reflectance** $$\rho_{SR}$$ 
 
 ###  What is Radiance?
 
@@ -169,29 +169,30 @@ Radiance is the variable directly measured by remote sensing instruments. Basica
 
 **Radiance** \((L_\lambda)\) is the amount of electromagnetic energy received by the sensor **per unit area**, **per unit solid angle**, and **per wavelength**:
 
-\[
+$$
 L_\lambda \; \left[ \frac{W}{m^2 \cdot sr \cdot \mu m} \right]
-\]
+$$
 
 Where:
-- \(W\) = watts (energy per second)
-- \(m^2\) = square meters of surface
-- \(sr\) = steradian (solid angle unit)
-- \(\mu m\) = micrometers (wavelength band)
+- $$W$$ = watts (energy per second)  
+- $$m^2$$ = square meters of surface  
+- $$sr$$ = steradian (solid angle unit)  
+- $$\mu m$$ = micrometers (wavelength band) 
 
 ![TOA](https://raw.githubusercontent.com/eo-agh/eo-course/main/docs/assets/images/lecture3_image9.png)  
 Credits: Mathworks
 
 Radiance is computed using **sensor-specific calibration coefficients** (gain and offset), provided in the metadata of the satellite image (e.g., MTL file for Landsat):
 
-\[
+$$
 L_\lambda = M_L \cdot \text{DN} + A_L
-\]
+$$
 
 Where:
-- \(M_L\) = radiance multiplicative scaling factor
-- \(A_L\) = radiance additive scaling factor
-- \(DN\) = raw digital number
+- $$M_L$$ = radiance multiplicative scaling factor  
+- $$A_L$$ = radiance additive scaling factor  
+- $$DN$$ = raw digital number  
+
 
 > These calibration coefficients are specific for each band and sensor.
 
@@ -201,9 +202,9 @@ Reflectance is the ratio of the amount of light leaving a target to the amount o
 
 **Reflectance** is the ratio of reflected to incoming solar radiation. It is **dimensionless** and normalized between 0 and 1:
 
-\[
+$$
 \rho = \frac{\text{Reflected Energy}}{\text{Incoming Energy}}
-\]
+$$
 
 TOA reflectance accounts for:
 - Variation in solar irradiance by wavelength
@@ -218,29 +219,31 @@ Reflectance (or more specifically hemispherical reflectance) is a property of th
 
 Once radiance is computed, we normalize it to solar geometry and solar energy to get TOA reflectance:
 
-\[
+$$
 \rho_{TOA} = \frac{\pi \cdot L_\lambda \cdot d^2}{ESUN_\lambda \cdot \cos(\theta_s)}
-\]
+$$
 
 **Where:**
 
-| Symbol        | Meaning |
-|---------------|---------|
-| \( \pi \)     | Mathematical constant (~3.1416), used to convert radiance to hemispherical reflectance |
-| \( L_\lambda \) | Spectral radiance at the sensor (from DN) |
-| \( d \)       | Earth-Sun distance in astronomical units (AU), varies daily |
-| \( ESUN_\lambda \) | Exoatmospheric solar irradiance for each band (provided in satellite documentation) |
-| \( \theta_s \) | Solar zenith angle (angle between sun and vertical at image location) |
+| Symbol             | Meaning                                                                 |
+|--------------------|-------------------------------------------------------------------------|
+| $$\pi$$            | Mathematical constant (~3.1416), used to convert radiance to hemispherical reflectance |
+| $$L_\lambda$$      | Spectral radiance at the sensor (from DN)                               |
+| $$d$$              | Earth–Sun distance in astronomical units (AU), varies daily             |
+| $$ESUN_\lambda$$   | Exoatmospheric solar irradiance for each band (provided in satellite documentation) |
+| $$\theta_s$$       | Solar zenith angle (angle between sun and vertical at image location)   |
+
 
 📌 The solar zenith angle and Earth–Sun distance are available in metadata or can be calculated from the image acquisition date and location.
 
 **Example Values (for Landsat 8)**
 
-| Parameter         | Example Band 4 (Red) Value |
-|------------------|----------------------------|
-| \( ESUN_\lambda \) | 2067 W/m²/μm               |
-| \( d \) (June)     | ~0.967 AU                  |
-| \( \theta_s \)     | 35° (varies with location/time) |
+| Parameter         | Example Band 4 (Red) Value         |
+|-------------------|------------------------------------|
+| $$ESUN_\lambda$$  | 2067 W/m²/μm                       |
+| $$d$$ (June)      | ~0.967 AU                          |
+| $$\theta_s$$      | 35° (varies with location/time)    |
+
 
 
 ### Radiance vs. Reflectance
@@ -320,14 +323,14 @@ Before correcting to Surface Reflectance (SR), we first compute **Top-of-Atmosph
 
 Once we have TOA reflectance, we apply an atmospheric correction model to obtain **true surface reflectance**:
 
-\[
+$$
 \rho_{SR} = \frac{\pi \cdot (L_\lambda - L_p)}{T_z \cdot (E_{down} + ESUN_\lambda \cdot \cos(\theta_s) \cdot T_n)}
-\]
+$$
 
 This removes:
-- \(L_p\): path radiance (backscatter from atmosphere)
-- \(T_z\), \(T_n\): atmospheric transmittance (upward/downward)
-- \(E_{down}\): diffuse irradiance from the sky
+- $$L_p$$: path radiance (backscatter from atmosphere)  
+- $$T_z$$, $$T_n$$: atmospheric transmittance (upward/downward)  
+- $$E_{down}$$: diffuse irradiance from the sky  
   
 
 ### 🛠️ Correction Methods
